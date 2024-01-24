@@ -66,28 +66,28 @@ let guide: [Character: Character] = [
     "E": "🩷",
     "F": "🔶",
     "G": "🍋",
-    "H": "⚪"
+    "H": "⬜"
 ]
 
 
 func stringToList (_ string: String, _ number: Int) -> [String] {
     var stringList = [String]()
-    var count = 1
     var curr = ""
     for char in string {
-        if count == number {
-            count = 1
+        if curr.count == number {
             stringList.append(curr)
             curr = ""
         }
         if let emoji = guide[char] {
             curr += String(emoji)
         }
+        
     }
     return stringList
 }
 
 let updatedStringList = stringToList(string, column)
+//print(updatedStringList[0].count)
 for i in 0..<updatedStringList.count {
     print(updatedStringList[i])
 }
