@@ -1,9 +1,25 @@
 import UIKit
 
-let row = 50
-let column = 50
+struct Knit {
+    let row = 50
+    let column = 50
+    let pattern: String
+    let guide: [Character: Character]
+    
+    init(_ pattern: String, _ guide: [Character: Character]) {
+        self.pattern = pattern
+        self.guide = guide
+    }
+    
+}
 
-var string = """
+//first piece: starsky
+
+//following character chart from craftdesignonline.com:
+//https://craftdesignonline.com/cdo/wp-content/uploads/patterns/pg_115947_chart.html
+
+print("Starsky")
+let string1 = """
 
 C C C C C C C C C H C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C H
 C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
@@ -58,7 +74,7 @@ A A B B B A B B B A B B B A A H H H A B B B A A A B B B A H H H H A B B B A B B 
 
 """
 
-let guide: [Character: Character] = [
+let guide1: [Character: Character] = [
     "A": "⬛",
     "B": "🟨",
     "C": "🟦",
@@ -69,8 +85,9 @@ let guide: [Character: Character] = [
     "H": "⬜"
 ]
 
+let starsky = Knit(string1, guide1)
 
-func stringToList (_ string: String, _ number: Int) -> [String] {
+func stringToList (_ string: String, _ number: Int, _ pattern: [Character: Character]) -> [String] {
     var stringList = [String]()
     var curr = ""
     for char in string {
@@ -78,7 +95,7 @@ func stringToList (_ string: String, _ number: Int) -> [String] {
             stringList.append(curr)
             curr = ""
         }
-        if let emoji = guide[char] {
+        if let emoji = pattern[char] {
             curr += String(emoji)
         }
         
@@ -86,10 +103,85 @@ func stringToList (_ string: String, _ number: Int) -> [String] {
     return stringList
 }
 
-let updatedStringList = stringToList(string, column)
-//print(updatedStringList[0].count)
-for i in 0..<updatedStringList.count {
-    print(updatedStringList[i])
+let updatedStringList1 = stringToList(starsky.pattern, starsky.column, starsky.guide)
+
+for i in 0..<updatedStringList1.count {
+    print(updatedStringList1[i])
 }
 
 
+//second piece: penguin and heart
+print("Penguin and Heart")
+
+//following character chart from craftdesignonline.com:
+//https://craftdesignonline.com/cdo/wp-content/uploads/patterns/pg_115721_chart.html
+
+let string2 = """
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C B B B B B B C C C C C C C C C C C C C C C C C C C C C C C C B B B C C C C C C C C C C C
+C C C C B B E E E E E E B B C C C C C C C C C C C C C C B B B B C C C B B A B B C C C C C C C C C C
+C C C B E E E E E E E E E E B C C C C C C C C C C C C C B A A B B B B B A A A B C C C C C C C C C C
+C C B E E E E E E E E E E E E B C C C C C C C C C C C C B A A A A B B A A A A B C C C C C C C C C C
+C B E E F F F E E E E F F F E E B C C C C C C C C C C C B A A A A A A A A A A B C C C C C C C C C C
+C B E F F F F F E E F F F F F E B C C C C C C C C C C C B A A A A A A A A A B B C C C C C C C C C C
+C B E F F F F F E E F F F F F E B C C C C C C C C C C C B B A A A A A A A B B C C C C C C C C C C C
+C B F F B B F F E E F F B B F F B C C C C C C C C C C C C B B B A A A A B B C C C C C C C C C C C C
+C B F F B B F B B B B F B B F F B C C C C C C C C C C C C C C B B B B B B C C C C C C C C C C C C C
+C B F F F F B D D D D B F F F F B C C C C C C C C C C C C C C C C C B B C C C C C C C C C C C C C C
+C C B F F F F B B B B F F F F B C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C B F F F F F F F F F F B C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C B B B B B B B B B B C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+"""
+
+let guide2: [Character: Character] = [
+    "A": "🟥",
+    "B": "⬛",
+    "C": "🩵",
+    "D": "🟨",
+    "E": "🟦",
+    "F": "⬜",
+]
+
+let heartPenguin = Knit(string2, guide2)
+
+let updatedStringList2 = stringToList(heartPenguin.pattern, heartPenguin.column, heartPenguin.guide)
+//print(updatedStringList[0].count)
+for i in 0..<updatedStringList2.count {
+    print(updatedStringList2[i])
+}
