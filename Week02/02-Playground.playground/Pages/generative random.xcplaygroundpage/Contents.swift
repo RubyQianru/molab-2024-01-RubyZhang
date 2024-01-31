@@ -22,6 +22,7 @@ struct MyView: View {
 // Sets the view currently being displayed by Xcode on behalf of the playground page.
 // Based on https://github.com/mobilelabclass-itp/02-Icon-Image
 
-#Preview {
-    MyView()
-}
+PlaygroundPage.current.setLiveView(
+  MyView()
+    .frame(width: 375, height: 812)
+)
