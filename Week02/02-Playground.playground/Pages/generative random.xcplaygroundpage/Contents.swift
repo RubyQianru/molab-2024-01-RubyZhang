@@ -1,4 +1,4 @@
-//: Creating random pattern from string
+//: Create an Xcode playground that makes an 1024x1024 image
 
 import SwiftUI
 import PlaygroundSupport
@@ -9,14 +9,19 @@ import PlaygroundSupport
 
 struct MyView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Image(systemName:  "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello!")
+        }
+        .padding()
     }
 }
 
 // Sets the view currently being displayed by Xcode on behalf of the playground page.
 // Based on https://github.com/mobilelabclass-itp/02-Icon-Image
 
-PlaygroundPage.current.setLiveView(
-  MyView()
-    .frame(width: 1024, height: 1024)
-)
+#Preview {
+    MyView()
+}
