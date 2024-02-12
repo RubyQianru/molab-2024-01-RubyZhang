@@ -12,7 +12,7 @@ struct ContentView: View {
                 Circle()
                     .foregroundColor(.randomColor())
                     .frame(width: CGFloat.random(in: 20...50), height: CGFloat.random(in: 20...100))
-                    .position(x: CGFloat.random(in: 0...400), y: CGFloat.random(in: 0...10))
+                    .position(x: CGFloat.random(in: 0...375), y: CGFloat.random(in: 0...10))
                     }
                 }
     }
