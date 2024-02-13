@@ -94,8 +94,8 @@ struct recordButton: View {
                         .onEnded { _ in
                             self.timerIsRunning.toggle()
                             withAnimation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
-//                                self.scaleSecondCircle *= 1.2
-//                                self.scaleThirdCircle *= 1.3
+                                self.scaleSecondCircle *= 1.2
+                                self.scaleThirdCircle *= 1.3
                                 self.blurEffect *= 5.0
                                 self.alphaEffect /= 2.0
                             }
