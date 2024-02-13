@@ -7,44 +7,48 @@
 
 import SwiftUI
 
+//NavigationStack:
 //https://www.hackingwithswift.com/articles/216/complete-guide-to-navigationview-in-swiftui
 
 struct ContentView: View {
     @State private var isShowingTestView = false
     @State private var isShowingButtonView = false
     
+    
     var body: some View {
         NavigationView {
-                    NavigationStack {
-                        NavigationLink(destination: Test(), isActive: $isShowingTestView) {
-                            Text("Test")
-                                .padding()
-                                .foregroundColor(.white)
+            NavigationStack {
+                NavigationLink(destination: Test(), isActive: $isShowingTestView) {
+                    Text("Test")
+                    //Button stying from Chat-gpt
+                    //https://chat.openai.com/c/6b6676d6-3bcd-45df-a3a7-a66d0f73bb36
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.primaryColor, lineWidth: 2)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.primaryColor, lineWidth: 2)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundColor(Color.primaryColor)
-                                        )
+                                        .foregroundColor(Color.primaryColor)
                                 )
-                        }
-                        
-                        NavigationLink(destination: Button(), isActive: $isShowingButtonView) {
-                            Text("Button")
-                                .padding()
-                                .foregroundColor(.white)
+                        )
+                }
+                
+                NavigationLink(destination: customButton(), isActive: $isShowingButtonView) {
+                    Text("Button")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.primaryColor, lineWidth: 2)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.primaryColor, lineWidth: 2)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .foregroundColor(Color.primaryColor)
-                                        )
+                                        .foregroundColor(Color.primaryColor)
                                 )
-                        }
-                    }
-                    .navigationTitle("Week04")
+                        )
+                }
+            }
+            .navigationTitle("Week04")
             
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
