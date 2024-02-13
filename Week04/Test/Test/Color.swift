@@ -1,6 +1,6 @@
 //
 //  Color.swift
-//  Week04
+//  Test
 //
 //  Created by qianru zhang on 2024/2/12.
 //
@@ -11,11 +11,11 @@
 import SwiftUI
 
 extension Color {
-    public static var primary: Color {
+    public static var primaryColor: Color {
         return Color(red: 95.0 / 255.0, green: 67.0 / 255.0, blue: 178.0 / 255.0, opacity: 1)
     }
     
-    public static var secondary: Color {
+    public static var secondaryColor: Color {
         return Color(red: 58.0 / 255.0, green: 49.0 / 255.0, blue: 83.0 / 255.0, opacity: 1)
 
     }

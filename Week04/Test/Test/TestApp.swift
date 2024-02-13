@@ -1,6 +1,6 @@
 //
-//  Week04App.swift
-//  Week04
+//  TestApp.swift
+//  Test
 //
 //  Created by qianru zhang on 2024/2/12.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Week04App: App {
+struct TestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
