@@ -32,9 +32,10 @@ struct ContentView: View {
                                         .foregroundColor(Color.primaryColor)
                                 )
                         )
+                    
                 }
                 
-                NavigationLink(destination: customButton(), isActive: $isShowingButtonView) {
+                NavigationLink(destination: buttonDemo(), isActive: $isShowingButtonView) {
                     Text("Button")
                         .padding()
                         .foregroundColor(.white)
@@ -48,7 +49,6 @@ struct ContentView: View {
                         )
                 }
             }
-            .navigationTitle("Week04")
             
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

@@ -17,6 +17,11 @@ extension Color {
     
     public static var secondaryColor: Color {
         return Color(red: 58.0 / 255.0, green: 49.0 / 255.0, blue: 83.0 / 255.0, opacity: 1)
-
     }
+    
+    public static var shadowColor: Color {
+        return Color(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, opacity: 0.15)
+    }
+    
+
 }
