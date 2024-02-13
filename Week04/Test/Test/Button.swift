@@ -17,12 +17,20 @@ import SwiftUI
 //https://www.hackingwithswift.com/books/ios-swiftui/triggering-events-repeatedly-using-a-timer
 //https://chat.openai.com/c/6b6676d6-3bcd-45df-a3a7-a66d0f73bb36
 
+let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
 struct buttonDemo: View {
+    
+    //State management for timer
+    @State private var startTime = 0
+    @State private var timeRemaining = 60
+        
     var body: some View {
         ZStack{
             LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
             VStack{
-                recordButton()
+                timeDisplay(timeRemaining: $timeRemaining)
+                recordButton(timeRemaining: $timeRemaining)
             }
         }
     }
@@ -38,14 +46,10 @@ struct recordButton: View {
     @State private var isPressing = false
     
     //State management for timer
-    @State private var startTime = 0
-    @State private var timeRemaining = 60
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @Binding var timeRemaining : Int
     
     var body: some View {
         VStack{
-            timeDisplay(timeRemaining: $timeRemaining)
             ZStack {
                 Circle()
                     .frame(width: 100, height: 100)
