@@ -16,6 +16,7 @@
 		690D26DE2B7AFC3D0011D075 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D26DD2B7AFC3D0011D075 /* Button.swift */; };
 		690D26E02B7BD77B0011D075 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D26DF2B7BD77B0011D075 /* Player.swift */; };
 		690D26E22B8589BC0011D075 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D26E12B8589BC0011D075 /* AudioPlayer.swift */; };
+		690D26E42B85A01A0011D075 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = 690D26E32B85A01A0011D075 /* spotify.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		690D26DD2B7AFC3D0011D075 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		690D26DF2B7BD77B0011D075 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		690D26E12B8589BC0011D075 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		690D26E32B85A01A0011D075 /* spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotify.png; path = ../../../../../../../Downloads/spotify.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		690D26D12B7AF5730011D075 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				690D26E32B85A01A0011D075 /* spotify.png */,
 				690D26D22B7AF5730011D075 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -142,6 +145,7 @@
 			files = (
 				690D26D32B7AF5730011D075 /* Preview Assets.xcassets in Resources */,
 				690D26D02B7AF5730011D075 /* Assets.xcassets in Resources */,
+				690D26E42B85A01A0011D075 /* spotify.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

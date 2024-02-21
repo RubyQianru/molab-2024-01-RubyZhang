@@ -3,19 +3,20 @@
 //  Test
 //
 //  Created by qianru zhang on 2024/2/12.
-//
+//  References:
+
+//  Create a circular button:
+//  https://stackoverflow.com/questions/59639048/how-can-i-make-a-simple-circular-button-in-swiftui-in-macos
+
+//  Shadow and gradient:
+//  https://www.youtube.com/watch?v=fuTDDeKs_gc
+
+//  Timer for animations:
+//  https://www.hackingwithswift.com/books/ios-swiftui/triggering-events-repeatedly-using-a-timer
+//  https://chat.openai.com/c/6b6676d6-3bcd-45df-a3a7-a66d0f73bb36
 
 import SwiftUI
 
-//Create a circular button:
-//https://stackoverflow.com/questions/59639048/how-can-i-make-a-simple-circular-button-in-swiftui-in-macos
-
-//Shadow and gradient:
-//https://www.youtube.com/watch?v=fuTDDeKs_gc
-
-//Timer for animations:
-//https://www.hackingwithswift.com/books/ios-swiftui/triggering-events-repeatedly-using-a-timer
-//https://chat.openai.com/c/6b6676d6-3bcd-45df-a3a7-a66d0f73bb36
 let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct buttonDemo: View {
