@@ -11,6 +11,8 @@
 
 import SwiftUI
 
+let timer2 = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+
 struct Player : View {
     @State private var isPlaying = false
     var body: some View {
@@ -23,19 +25,28 @@ struct Player : View {
 
 struct animate : View {
     @Binding var isPlaying : Bool
+    @State private var rotationDegrees: Double = 0.0
     var body: some View {
         ZStack{
-            Image("spotify.png")
+            Circle()
+            Image("spotify")
                 .resizable()
-                .frame(width: 300, height: 300)
+                .frame(width: 200, height: 200)
                 .mask(
                     Circle()
+                        .frame(width: 170, height: 170)
                 )
-//            Circle()
+                .rotationEffect(Angle(degrees: rotationDegrees))
+                .onReceive(timer2) { _ in
+                    withAnimation(Animation.linear(duration: 0.01)) {
+                        self.rotationDegrees += isPlaying ? 0.5 : 0
+                    }
+                }
         }
         .padding(50)
     }
 }
+
 
 struct playTab : View {
     @StateObject var audioPlayer = AudioPlayer()
@@ -55,7 +66,7 @@ struct playTab : View {
                 isPlaying.toggle()
             }, label: {
                 Image(systemName: isPlaying ? "pause.fill" : "play.fill")
-                        .imageScale(.large)
+                    .imageScale(.large)
             })
             Spacer()
             Button(action: {
