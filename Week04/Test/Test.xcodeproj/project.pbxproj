@@ -17,6 +17,7 @@
 		690D26E02B7BD77B0011D075 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D26DF2B7BD77B0011D075 /* Player.swift */; };
 		690D26E22B8589BC0011D075 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D26E12B8589BC0011D075 /* AudioPlayer.swift */; };
 		690D26E42B85A01A0011D075 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = 690D26E32B85A01A0011D075 /* spotify.png */; };
+		69826CFE2B8D386500779289 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = 69826CFD2B8D386500779289 /* spotify.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		690D26DF2B7BD77B0011D075 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		690D26E12B8589BC0011D075 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		690D26E32B85A01A0011D075 /* spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotify.png; path = ../../../../../../../Downloads/spotify.png; sourceTree = "<group>"; };
+		69826CFD2B8D386500779289 /* spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotify.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				690D26DD2B7AFC3D0011D075 /* Button.swift */,
 				690D26DB2B7AF8D30011D075 /* Test.swift */,
 				690D26D92B7AF58C0011D075 /* Color.swift */,
+				69826CFC2B8D37F500779289 /* Resource */,
 				690D26CF2B7AF5730011D075 /* Assets.xcassets */,
 				690D26D12B7AF5730011D075 /* Preview Content */,
 			);
@@ -83,6 +86,14 @@
 				690D26D22B7AF5730011D075 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		69826CFC2B8D37F500779289 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				69826CFD2B8D386500779289 /* spotify.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69826CFE2B8D386500779289 /* spotify.png in Resources */,
 				690D26D32B7AF5730011D075 /* Preview Assets.xcassets in Resources */,
 				690D26D02B7AF5730011D075 /* Assets.xcassets in Resources */,
 				690D26E42B85A01A0011D075 /* spotify.png in Resources */,
