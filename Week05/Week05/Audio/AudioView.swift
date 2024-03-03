@@ -14,22 +14,17 @@ var recordingSession: AVAudioSession!
 var audioRecorder: AVAudioRecorder!
 
 struct RecordView: View{
-    @State var selectedTab = "house"
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            TabView(selection: $selectedTab) {
-                ButtonDemo()
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            //confirm ignoresSafeArea
-            .ignoresSafeArea(.all, edges: .bottom)
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
+            ButtonDemo()
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
 
 struct ButtonDemo: View {
-    
+    @StateObject private var audioRecorder = AudioRecorder()
+
     //State management for timer
     @State private var startTime = 0
     @State private var timeRemaining = 60
@@ -38,6 +33,7 @@ struct ButtonDemo: View {
     
     var body: some View {
         VStack{
+            Visualization(audioData: audioRecorder.audioData)
             TimeDisplay(
                 timerIsRunning: $timerIsRunning,
                 timeRemaining: $timeRemaining)
@@ -48,9 +44,22 @@ struct ButtonDemo: View {
     }
 }
 
+struct Visualization: View {
+    var audioData : [CGFloat]
+    var body: some View {
+        VStack{
+            LineGraph(data: audioData, maxData: 1, minValue: 0.00, maxValue: 1.00)
+                .clipped()
+                .background(Color.accentColor.opacity(0.1))
+                .cornerRadius(20)
+                .padding()
+                .aspectRatio(1, contentMode: .fit)
+        }
+    }
+}
+
 struct RecordButton: View {
-    
-    //State mamagememnt for button
+    @EnvironmentObject private var audioRecorder: AudioRecorder
     @Binding var timerIsRunning : Bool
     
     //State management for timer
@@ -63,6 +72,11 @@ struct RecordButton: View {
                 print("Timer triggered!")
                 if !self.timerIsRunning {
                     self.timeRemaining = 60
+                }
+                if audioRecorder.isRecording {
+                    audioRecorder.stopRecording()
+                } else {
+                    audioRecorder.startRecording()
                 }
             }){
                 Image(systemName: timerIsRunning ? "record.circle" : "record.circle.fill")
