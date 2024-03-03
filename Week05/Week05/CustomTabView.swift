@@ -31,7 +31,6 @@ struct CustomTabView: View {
                 ForEach(tabs, id:\.self){image in
                     if image == "plus" {
                         TabButtonView(image: image, selectedTab: $selectedTab)
-                            .colorMultiply(Color("green"))
                             .scaleEffect(2)
                     } else {
                         TabButtonView(image: image, selectedTab: $selectedTab)
@@ -53,7 +52,7 @@ struct CustomTabView: View {
 }
 
 
-var tabs = ["house", "filemenu.and.selection", "plus", "folder", "person.crop.circle.fill"]
+var tabs = ["house",  "plus", "folder"]
 
 struct BottomTabBarView_Previews: PreviewProvider {
 
