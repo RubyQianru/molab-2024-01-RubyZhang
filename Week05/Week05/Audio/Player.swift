@@ -1,14 +1,11 @@
 //
 //  Player.swift
-//  Test
+//  Week05
 //
-//  Created by qianru zhang on 2024/2/13.
-//  References:
-//  Padding and spacing:
-//  https://www.hackingwithswift.com/quick-start/swiftui/how-to-control-spacing-around-individual-views-using-padding
-//  Image masking:
-//  https://www.hackingwithswift.com/quick-start/swiftui/how-to-mask-one-view-with-another
+//  Created by qianru zhang on 2024/3/2.
+//
 
+import Foundation
 import SwiftUI
 
 let timer2 = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
@@ -80,6 +77,8 @@ struct playTab : View {
     }
 }
 
-#Preview {
-    Player()
+struct Player_Previews: PreviewProvider {
+    static var previews: some View {
+        Player()
+    }
 }

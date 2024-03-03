@@ -16,9 +16,19 @@ class AudioPlayer: ObservableObject {
 
     init() {
         print("Audio player init")
+        
     }
     
     func play() {
+        player = loadAudio(soundFile)
+        print("Audio player", player as Any)
+        // Loop indefinitely
+        player?.numberOfLoops = -1
+        player?.play()
+    }
+    
+    func playTrack(_ audioData: String) {
+        soundFile = audioData
         player = loadAudio(soundFile)
         print("Audio player", player as Any)
         // Loop indefinitely
@@ -74,9 +84,7 @@ class AudioPlayer: ObservableObject {
     
     static let audioRef = [
         "https://www.youraccompanist.com/images/stories/Reference%20Scales_On%20A%20Flat-G%20Sharp.mp3",
-        "bbc-birds-1.m4a",
         "https://www.youraccompanist.com/images/stories/Reference%20Scales_Pentatonic%20on%20F%20Sharp.mp3",
-        "bbc-birds-2.m4a",
         "https://www.youraccompanist.com/images/stories/Reference%20Scales_Chromatic%20Scale%20On%20F%20Sharp.mp3",
     ]
 }

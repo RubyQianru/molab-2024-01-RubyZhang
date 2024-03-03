@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+var recordButton: UIButton!
+var recordingSession: AVAudioSession!
+var audioRecorder: AVAudioRecorder!
 
-struct AudioView: View{
+struct RecordView: View{
     @State var selectedTab = "house"
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
@@ -51,8 +55,6 @@ struct RecordButton: View {
     
     //State management for timer
     @Binding var timeRemaining : Int
-    
-    
     
     var body: some View {
         VStack{
@@ -106,6 +108,6 @@ struct TimeDisplay: View {
 
 struct Audio_Previews: PreviewProvider {
     static var previews: some View {
-        AudioView()
+        RecordView()
     }
 }

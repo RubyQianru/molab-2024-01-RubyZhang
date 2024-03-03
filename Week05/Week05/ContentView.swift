@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("SeaSell")
+                Text("Web3")
                     .font(.title2)
                     .fontWeight(.bold)
                 
@@ -26,7 +26,7 @@ struct ContentView: View {
                 .font(Font.body.weight(.bold))
                 .foregroundColor(Color("purple"))
             }
-            Text("Find Your NFTs Today")
+            Text("Earn your points")
             
             ScrollView (.horizontal, showsIndicators: false) {
                 LazyHStack {
@@ -49,7 +49,7 @@ struct ContentView: View {
                                     }
                                     .foregroundColor(Color("black"))
                                     .background(Color("green"))
-                                    .clipShape(Capsule())
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
                                     
                                     Button(action: {}) {
                                         ZStack {

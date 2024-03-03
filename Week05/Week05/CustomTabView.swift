@@ -18,7 +18,10 @@ struct CustomTabView: View {
                     .tag("person.crop.circle")
                 
                 FilesView()
-                    .tag("filemenu.and.selection")
+                    .tag("folder")
+                
+                RecordView()
+                    .tag("plus")
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             //confirm ignoresSafeArea
@@ -53,8 +56,12 @@ struct CustomTabView: View {
 var tabs = ["house", "filemenu.and.selection", "plus", "folder", "person.crop.circle.fill"]
 
 struct BottomTabBarView_Previews: PreviewProvider {
+
     static var previews: some View {
-        CustomTabView()
+        let audioDataStore = AudioDataStore()
+
+        return CustomTabView()
+            .environmentObject(audioDataStore)
     }
 }
 
