@@ -60,14 +60,12 @@ class AudioRecorder: ObservableObject {
     private func updateAudioVisualization() {
         guard let recorder = audioRecorder else { return }
         recorder.updateMeters()
-        
-        // Get the average power for the left channel (0.0 to -160.0 dB)
-        let power = recorder.averagePower(forChannel: 0)
-        // Convert the power to a value between 0 and 1
+
+        let power = recorder.peakPower(forChannel: 0)
         let normalizedPower = pow(10, (0.05 * power))
-        
+        // Normalize the power to a value between 0 and
         print(CGFloat(normalizedPower))
-        
+            
         DispatchQueue.main.async {
             self.audioData.append(CGFloat(normalizedPower))
         }

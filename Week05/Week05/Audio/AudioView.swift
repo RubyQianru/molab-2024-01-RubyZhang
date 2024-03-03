@@ -23,8 +23,7 @@ struct RecordView: View{
 }
 
 struct ButtonDemo: View {
-    @StateObject private var audioRecorder = AudioRecorder()
-
+    
     //State management for timer
     @State private var startTime = 0
     @State private var timeRemaining = 60
@@ -33,7 +32,7 @@ struct ButtonDemo: View {
     
     var body: some View {
         VStack{
-            Visualization(audioData: audioRecorder.audioData)
+            
             TimeDisplay(
                 timerIsRunning: $timerIsRunning,
                 timeRemaining: $timeRemaining)
@@ -59,7 +58,7 @@ struct Visualization: View {
 }
 
 struct RecordButton: View {
-    @EnvironmentObject private var audioRecorder: AudioRecorder
+    @StateObject private var audioRecorder = AudioRecorder()
     @Binding var timerIsRunning : Bool
     
     //State management for timer
@@ -67,38 +66,31 @@ struct RecordButton: View {
     
     var body: some View {
         VStack{
-            Button(action: {
-                self.timerIsRunning.toggle()
-                print("Timer triggered!")
-                if !self.timerIsRunning {
-                    self.timeRemaining = 60
-                }
-                if audioRecorder.isRecording {
-                    audioRecorder.stopRecording()
-                } else {
-                    audioRecorder.startRecording()
-                }
-            }){
-                Image(systemName: timerIsRunning ? "record.circle" : "record.circle.fill")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundColor(.red)
-                    .onReceive(timer) { _ in
-                        if self.timeRemaining > 0 && self.timerIsRunning {
-                            self.timeRemaining -= 1
-                        }
-                    }
-                    .simultaneousGesture(
-                        // Remove the LongPressGesture
-                        TapGesture()
-                            .onEnded { _ in
-                                self.timerIsRunning.toggle()
-                                self.timeRemaining = 60
-                            }
-                    )
-                
-            }
             
+            Image(systemName: timerIsRunning ? "record.circle" : "record.circle.fill")
+                .resizable()
+                .frame(width: 80, height: 80)
+                .foregroundColor(.red)
+                .onReceive(timer) { _ in
+                    if self.timeRemaining > 0 && self.timerIsRunning {
+                        self.timeRemaining -= 1
+                    }
+                }
+                .simultaneousGesture(
+                    // Remove the LongPressGesture
+                    TapGesture()
+                        .onEnded { _ in
+                            self.timerIsRunning.toggle()
+                            self.timeRemaining = 60
+                            
+                            if audioRecorder.isRecording {
+                                audioRecorder.stopRecording()
+                            } else {
+                                audioRecorder.startRecording()
+                            }
+                        }
+                )
+            Visualization(audioData: audioRecorder.audioData)
         }
     }
 }
