@@ -30,10 +30,19 @@ struct CustomTabView: View {
             HStack {
                 ForEach(tabs, id:\.self){image in
                     if image == "plus" {
-                        TabButtonView(image: image, selectedTab: $selectedTab)
-                            .scaleEffect(2)
+                        ZStack{
+                            Circle()
+                                .foregroundColor(Color.greenColor)
+                                .frame(width: 80)
+                            TabButtonView(image: image, selectedTab: $selectedTab)
+                                .scaleEffect(2)
+                                .colorMultiply(.black)
+                            
+                        }
                     } else {
                         TabButtonView(image: image, selectedTab: $selectedTab)
+                            .padding(.horizontal, 30)
+                            .scaleEffect(1.2)
                     }
                     
                     if image != tabs.last{
@@ -43,7 +52,7 @@ struct CustomTabView: View {
                 }
             }
             .padding(.horizontal, 10)
-            .background(Color("black"))
+            .background(Color(.black))
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .padding(.horizontal)
         }

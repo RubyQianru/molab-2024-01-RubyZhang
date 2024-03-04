@@ -11,22 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text("Web3")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Spacer(minLength: 0)
-                
-                Group {
-                    Button(action: {}) {
-                        Image(systemName: "bell.badge")
-                    }
-                }
-                .font(Font.body.weight(.bold))
-                .foregroundColor(Color("purple"))
-            }
-            Text("Earn your points")
+            HeaderView(title: "App", subtitle: "Earn your points today")
             
             ScrollView (.horizontal, showsIndicators: false) {
                 LazyHStack {
@@ -47,8 +32,8 @@ struct ContentView: View {
                                             Spacer()
                                         }
                                     }
-                                    .foregroundColor(Color("black"))
-                                    .background(Color("green"))
+                                    .foregroundColor(Color(.black))
+                                    .background(Color.greenColor)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     
                                     Button(action: {}) {
@@ -58,7 +43,7 @@ struct ContentView: View {
                                                 .foregroundColor(.white)
                                             Image(systemName: "heart")
                                                 .font(Font.system(size: 20))
-                                                .foregroundColor(Color("purple"))
+                                                .foregroundColor(Color(.pink))
                                         }
                                     }
                                 }

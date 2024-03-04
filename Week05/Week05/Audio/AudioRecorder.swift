@@ -9,12 +9,13 @@
 import SwiftUI
 import AVFoundation
 
-class AudioRecorder: ObservableObject {
+class AudioRecorder: NSObject, ObservableObject {
     private var audioRecorder: AVAudioRecorder?
     @Published var isRecording: Bool = false
     @Published var audioData: [CGFloat] = []
     
-    init() {
+    override init() {
+        super.init()
         setupAudioRecorder()
     }
     
@@ -36,7 +37,7 @@ class AudioRecorder: ObservableObject {
             let audioFilename = documentPath.appendingPathComponent("recording.m4a")
             
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: audioSettings)
-            //            audioRecorder?.delegate = self
+            audioRecorder?.delegate = self
             audioRecorder?.prepareToRecord()
         } catch {
             print("Error setting up audio recorder: \(error.localizedDescription)")
@@ -47,7 +48,7 @@ class AudioRecorder: ObservableObject {
         audioRecorder?.record()
         isRecording = true
         
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.updateAudioVisualization()
         }
     }
@@ -60,16 +61,26 @@ class AudioRecorder: ObservableObject {
     private func updateAudioVisualization() {
         guard let recorder = audioRecorder else { return }
         recorder.updateMeters()
+        
+        let power = recorder.averagePower(forChannel: 0)
+        print("Decibels: \(power)")
 
-        let power = recorder.peakPower(forChannel: 0)
         let normalizedPower = pow(10, (0.05 * power))
         // Normalize the power to a value between 0 and
-        print(CGFloat(normalizedPower))
-            
+        
         DispatchQueue.main.async {
             self.audioData.append(CGFloat(normalizedPower))
         }
     }
 }
 
+extension AudioRecorder: AVAudioRecorderDelegate {
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if flag {
+            print("Recording finished successfully.")
+        } else {
+            print("Recording failed.")
+        }
+    }
+}
 

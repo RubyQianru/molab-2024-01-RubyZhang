@@ -9,25 +9,31 @@ import SwiftUI
 
 struct FilesView: View {
     @EnvironmentObject var audioDataStore: AudioDataStore
-
+    @EnvironmentObject var globalPlayer: AudioPlayer
+    
     var body: some View {
-        List {
-            Section  {
-                ForEach(audioDataStore.audiosSamples.indices, id:\.self) { index in
-                    TabListView(file: $audioDataStore.audiosSamples[index])
+        VStack(alignment: .leading){
+            HeaderView(title: "Assets", subtitle: "Build your assets today")
+            List {
+                Section  {
+                    ForEach(audioDataStore.audiosSamples.indices, id:\.self) { index in
+                        TabListView(file: $audioDataStore.audiosSamples[index])
                     }
                 }
             }
         }
+        .padding()
+        .foregroundColor(.black)
+
     }
+}
 
 struct TabListView: View {
     @EnvironmentObject var audioDataStore: AudioDataStore
-    @State private var isPlaying = false
-
+    @EnvironmentObject var globalPlayer: AudioPlayer
     @Binding var file: AudioData
-    @StateObject var audioPlayer = AudioPlayer()
-
+    @State private var isPlaying = false
+    
     var body: some View {
         Button(action: {}) {
             HStack{
@@ -35,24 +41,36 @@ struct TabListView: View {
                     file.toggleFavorite()
                 }) {
                     Image(systemName: file.favorite ? "heart.fill" : "heart")
-                        .foregroundColor(Color("purple") )
+                        .foregroundColor(Color(.pink) )
                         .font(Font.title2.weight(.bold))
                 }
                 Text(file.fileName)
                     .foregroundColor(.black)
                 Spacer()
+                
                 Button(action:{
-                    if !isPlaying {
-                        audioPlayer.playTrack(file.audioFile)
+                    if audioDataStore.currentlyPlaying == nil && !isPlaying{
+                        globalPlayer.soundFile = file.audioFile
+                        globalPlayer.play()
+                        audioDataStore.currentlyPlaying = file
+                        isPlaying.toggle()
+                    } else if audioDataStore.currentlyPlaying != nil && !isPlaying {
+                        globalPlayer.stop()
+                        globalPlayer.soundFile = file.audioFile
+                        globalPlayer.play()
+                        audioDataStore.currentlyPlaying = file
+                        isPlaying.toggle()
                     } else {
-                        audioPlayer.stop()
+                        globalPlayer.stop()
+                        isPlaying.toggle()
                     }
-                    isPlaying.toggle()
-                }) {
-                    Image(systemName: isPlaying ? "stop.fill" : "play.fill")
-                        .foregroundColor(Color("purple") )
+                }
+                ) {
+                    Image(systemName: audioDataStore.currentlyPlaying?.fileName == file.fileName && isPlaying ? "stop.fill" : "play.fill")
+                        .foregroundColor(Color.purpleColor)
                         .font(Font.title2.weight(.bold))
                 }
+                .frame(height: 35)
                 
             }
         }
@@ -64,8 +82,10 @@ struct TabListView: View {
 struct FilesView_Previews: PreviewProvider {
     static var previews: some View {
         let audioDataStore = AudioDataStore()
-
+        let globalPlayer = AudioPlayer()
+        
         FilesView()
             .environmentObject(audioDataStore)
+            .environmentObject(globalPlayer)
     }
 }

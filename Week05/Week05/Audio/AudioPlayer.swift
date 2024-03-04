@@ -16,7 +16,6 @@ class AudioPlayer: ObservableObject {
 
     init() {
         print("Audio player init")
-        
     }
     
     func play() {
@@ -27,17 +26,9 @@ class AudioPlayer: ObservableObject {
         player?.play()
     }
     
-    func playTrack(_ audioData: String) {
-        soundFile = audioData
-        player = loadAudio(soundFile)
-        print("Audio player", player as Any)
-        // Loop indefinitely
-        player?.numberOfLoops = -1
-        player?.play()
-    }
-    
     func stop() {
         player?.stop()
+        player = nil
     }
     
     func prev() {

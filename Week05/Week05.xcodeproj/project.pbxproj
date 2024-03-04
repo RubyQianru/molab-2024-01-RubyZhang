@@ -20,6 +20,8 @@
 		697DEB3C2B940265008CF335 /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB3B2B940265008CF335 /* AudioData.swift */; };
 		697DEB3E2B942CB8008CF335 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB3D2B942CB8008CF335 /* AudioRecorder.swift */; };
 		697DEB412B942FD5008CF335 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB402B942FD5008CF335 /* LineGraph.swift */; };
+		697DEB432B951222008CF335 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB422B951222008CF335 /* Color.swift */; };
+		697DEB462B9545ED008CF335 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB452B9545ED008CF335 /* Header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		697DEB3B2B940265008CF335 /* AudioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 		697DEB3D2B942CB8008CF335 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		697DEB402B942FD5008CF335 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		697DEB422B951222008CF335 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		697DEB452B9545ED008CF335 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,9 @@
 				697DEB3F2B942FB9008CF335 /* Visualization */,
 				697DEB0C2B93D3B8008CF335 /* Week05App.swift */,
 				697DEB2A2B93D4DF008CF335 /* ContentView.swift */,
+				697DEB452B9545ED008CF335 /* Header.swift */,
 				697DEB292B93D4DF008CF335 /* CustomTabView.swift */,
+				697DEB442B95122C008CF335 /* Color */,
 				697DEB2B2B93D4DF008CF335 /* FilesView.swift */,
 				697DEB282B93D4DF008CF335 /* TabButtonView.swift */,
 				697DEB362B93FC2B008CF335 /* Audio */,
@@ -108,6 +114,14 @@
 				697DEB402B942FD5008CF335 /* LineGraph.swift */,
 			);
 			path = Visualization;
+			sourceTree = "<group>";
+		};
+		697DEB442B95122C008CF335 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				697DEB422B951222008CF335 /* Color.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				697DEB0D2B93D3B8008CF335 /* Week05App.swift in Sources */,
+				697DEB462B9545ED008CF335 /* Header.swift in Sources */,
 				697DEB312B93D9C6008CF335 /* AudioView.swift in Sources */,
 				697DEB2C2B93D4DF008CF335 /* CustomTabView.swift in Sources */,
 				697DEB412B942FD5008CF335 /* LineGraph.swift in Sources */,
 				697DEB352B93FC0B008CF335 /* AudioPlayer.swift in Sources */,
+				697DEB432B951222008CF335 /* Color.swift in Sources */,
 				697DEB3E2B942CB8008CF335 /* AudioRecorder.swift in Sources */,
 				697DEB3C2B940265008CF335 /* AudioData.swift in Sources */,
 				697DEB2E2B93D4DF008CF335 /* ContentView.swift in Sources */,

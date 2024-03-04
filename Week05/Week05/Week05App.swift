@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 class AudioDataStore: ObservableObject {
     @Published var audiosSamples: [AudioData] = [
@@ -14,16 +15,20 @@ class AudioDataStore: ObservableObject {
         AudioData("Test 3", "https://www.youraccompanist.com/images/stories/Reference%20Scales_Chromatic%20Scale%20On%20F%20Sharp.mp3"),
         // Add more AudioData items as needed
     ]
+    
+    @Published var currentlyPlaying: AudioData? = nil
 }
+
 
 @main
 struct Week05App: App {
     @StateObject private var audioDataStore = AudioDataStore()
-
+    @StateObject private var globalPlayer = AudioPlayer()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CustomTabView()
                 .environmentObject(audioDataStore)
+                .environmentObject(globalPlayer)
         }
     }
 }
