@@ -12,25 +12,26 @@ struct HeaderView: View {
     var subtitle: String
     
     var body: some View {
-        HStack {
-            Text(title)
-                .font(.title2)
-                .fontWeight(.bold)
-            
-            Spacer(minLength: 0)
-            
-            Group {
-                Button(action: {}) {
-                    Image(systemName: "drop.fill")
-                        .foregroundColor(Color.purpleColor)
-                        .scaleEffect(1.2)
+        VStack(alignment: .leading){
+            HStack {
+                Text(title)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer(minLength: 0)
+                Group {
+                    Button(action: {}) {
+                        Image(systemName: "drop.fill")
+                            .foregroundColor(Color.purpleColor)
+                            .scaleEffect(1.2)
+                    }
+                    Text("12")
                 }
-                Text("12")
+                .font(Font.body.weight(.bold))
+                .foregroundColor(Color.purpleColor)
             }
-            .font(Font.body.weight(.bold))
-            .foregroundColor(Color.purpleColor)
+            Text(subtitle)
         }
-        Text(subtitle)
+        .padding()
         
     }
 }

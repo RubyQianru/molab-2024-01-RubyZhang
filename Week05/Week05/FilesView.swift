@@ -22,8 +22,6 @@ struct FilesView: View {
                 }
             }
         }
-        .padding()
-        .foregroundColor(.black)
 
     }
 }

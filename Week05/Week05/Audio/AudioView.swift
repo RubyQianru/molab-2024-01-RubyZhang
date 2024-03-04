@@ -15,11 +15,14 @@ var audioRecorder: AVAudioRecorder!
 
 struct RecordView: View{
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
+        VStack(alignment: .leading) {
+            HeaderView(title: "Recorder", subtitle: "Record")
             ButtonDemo()
+            Spacer()
         }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
+        .ignoresSafeArea(.all, edges: .bottom)
     }
+    
 }
 
 struct ButtonDemo: View {
@@ -32,7 +35,6 @@ struct ButtonDemo: View {
     
     var body: some View {
         VStack{
-            
             TimeDisplay(
                 timerIsRunning: $timerIsRunning,
                 timeRemaining: $timeRemaining)
@@ -40,6 +42,8 @@ struct ButtonDemo: View {
                 timerIsRunning: $timerIsRunning,
                 timeRemaining: $timeRemaining)
         }
+        .ignoresSafeArea(.all, edges: .bottom)
+
     }
 }
 
@@ -54,6 +58,7 @@ struct Visualization: View {
                 .padding()
                 .aspectRatio(1, contentMode: .fit)
         }
+
     }
 }
 
@@ -108,6 +113,7 @@ struct TimeDisplay: View {
                 .font(.system(size: 48))
                 .foregroundColor(Color(.black))
         }
+        
     }
 }
 

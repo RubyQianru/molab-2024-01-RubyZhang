@@ -52,15 +52,14 @@ struct ContentView: View {
                             
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding(.horizontal)
+                        .padding(.horizontal, 10)
                     }
                 }
             }
-            .padding(.top, 20)
+            .padding()
             .frame(height: 300)
             Spacer(minLength: 0)
         }
-        .padding()
         .foregroundColor(.black)
     }
 }
