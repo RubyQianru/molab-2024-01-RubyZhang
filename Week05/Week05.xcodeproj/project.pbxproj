@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		697DEB0D2B93D3B8008CF335 /* Week05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB0C2B93D3B8008CF335 /* Week05App.swift */; };
 		697DEB142B93D3B9008CF335 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697DEB132B93D3B9008CF335 /* Preview Assets.xcassets */; };
-		697DEB1C2B93D3F6008CF335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697DEB1A2B93D3F5008CF335 /* Assets.xcassets */; };
 		697DEB2C2B93D4DF008CF335 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB292B93D4DF008CF335 /* CustomTabView.swift */; };
 		697DEB2D2B93D4DF008CF335 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB282B93D4DF008CF335 /* TabButtonView.swift */; };
 		697DEB2E2B93D4DF008CF335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB2A2B93D4DF008CF335 /* ContentView.swift */; };
@@ -23,13 +22,13 @@
 		697DEB432B951222008CF335 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB422B951222008CF335 /* Color.swift */; };
 		697DEB462B9545ED008CF335 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697DEB452B9545ED008CF335 /* Header.swift */; };
 		697DEB492B966D9C008CF335 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 697DEB482B966D9B008CF335 /* Images */; };
+		697DEB4B2B966F48008CF335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697DEB4A2B966F48008CF335 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		697DEB092B93D3B8008CF335 /* Week05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697DEB0C2B93D3B8008CF335 /* Week05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week05App.swift; sourceTree = "<group>"; };
 		697DEB132B93D3B9008CF335 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		697DEB1A2B93D3F5008CF335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../SeaSell-UI/SeaSell/Assets.xcassets"; sourceTree = "<group>"; };
 		697DEB282B93D4DF008CF335 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
 		697DEB292B93D4DF008CF335 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		697DEB2A2B93D4DF008CF335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		697DEB422B951222008CF335 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		697DEB452B9545ED008CF335 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		697DEB482B966D9B008CF335 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		697DEB4A2B966F48008CF335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +59,7 @@
 		697DEB002B93D3B8008CF335 = {
 			isa = PBXGroup;
 			children = (
+				697DEB4A2B966F48008CF335 /* Assets.xcassets */,
 				697DEB0B2B93D3B8008CF335 /* Week05 */,
 				697DEB0A2B93D3B8008CF335 /* Products */,
 			);
@@ -84,7 +85,6 @@
 				697DEB2B2B93D4DF008CF335 /* FilesView.swift */,
 				697DEB282B93D4DF008CF335 /* TabButtonView.swift */,
 				697DEB362B93FC2B008CF335 /* Audio */,
-				697DEB1A2B93D3F5008CF335 /* Assets.xcassets */,
 				697DEB472B966D45008CF335 /* Resources */,
 				697DEB122B93D3B9008CF335 /* Preview Content */,
 			);
@@ -194,8 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				697DEB142B93D3B9008CF335 /* Preview Assets.xcassets in Resources */,
+				697DEB4B2B966F48008CF335 /* Assets.xcassets in Resources */,
 				697DEB492B966D9C008CF335 /* Images in Resources */,
-				697DEB1C2B93D3F6008CF335 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
