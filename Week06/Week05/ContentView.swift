@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            HeaderView(title: "App", subtitle: "Earn your points today")
+            HeaderView(title: "Avala", subtitle: "Earn your points today")
             
             ScrollView (.horizontal, showsIndicators: false) {
                 LazyHStack {
