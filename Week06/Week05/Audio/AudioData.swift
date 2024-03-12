@@ -11,13 +11,15 @@ import AVFoundation
 struct AudioData: Identifiable, Hashable {
     var id : UUID
     var fileName : String = "Untitled"
-    var audioFile: String
+    var audioUrl: URL
     var favorite : Bool = false
+    let createdAt: Date
 
-    init(_ fileName: String,_ audioFile: String) {
+    init(_ fileName: String,_ audioUrl: URL,_ createdAt: Date) {
         self.id = UUID()
         self.fileName = fileName
-        self.audioFile = audioFile
+        self.audioUrl = audioUrl
+        self.createdAt = createdAt
         print("Audio player init")
     }
     

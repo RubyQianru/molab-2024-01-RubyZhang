@@ -16,11 +16,11 @@ struct FilesView: View {
         VStack(alignment: .leading){
             HeaderView(title: "Assets", subtitle: "Build your assets today")
             List {
-                Section  {
-                    ForEach(audioDataStore.recordings.indices, id:\.self) { index in
-                        TabListView(file: $audioDataStore.recordings[index])
-                    }
-                }
+//                Section  {
+//                    ForEach(audioDataStore.recordings.indices, id:\.self) { index in
+//                        TabListView(file: $audioDataStore.recordings[index])
+//                    }
+//                }
                 Section {
                     ForEach(globalRecorder.recordings.indices, id:\.self) { index in
                         TabListView(file: $globalRecorder.recordings[index])
@@ -54,13 +54,13 @@ struct FilesView: View {
                         
                         Button(action:{
                             if audioDataStore.currentlyPlaying == nil && !isPlaying{
-                                globalPlayer.soundFile = file.audioFile
+                                globalPlayer.soundFile = file.audioUrl
                                 globalPlayer.play()
                                 audioDataStore.currentlyPlaying = file
                                 isPlaying.toggle()
                             } else if audioDataStore.currentlyPlaying != nil && !isPlaying {
                                 globalPlayer.stop()
-                                globalPlayer.soundFile = file.audioFile
+                                globalPlayer.soundFile = file.audioUrl
                                 globalPlayer.play()
                                 audioDataStore.currentlyPlaying = file
                                 isPlaying.toggle()

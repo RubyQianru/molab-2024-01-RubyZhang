@@ -17,11 +17,11 @@ struct CustomTabView: View {
                 ContentView()
                     .tag("person.crop.circle")
                 
-                FilesView()
-                    .tag("folder")
-                
-                RecordView()
+                RecorderView()
                     .tag("plus")
+                //
+                RecordingsList(audioRecorder: AudioRecorder())
+                    .tag("folder")
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             //confirm ignoresSafeArea
@@ -64,16 +64,12 @@ struct CustomTabView: View {
 var tabs = ["house",  "plus", "folder"]
 
 struct BottomTabBarView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
-        let audioDataStore = AudioDataStore()
-        let globalPlayer = AudioPlayer()
-        let globalRecorder = AudioRecorder()
         
         return CustomTabView()
-            .environmentObject(audioDataStore)
-            .environmentObject(globalPlayer)
-            .environmentObject(globalRecorder)
+            .environmentObject(AudioRecorder())
+        
     }
 }
 

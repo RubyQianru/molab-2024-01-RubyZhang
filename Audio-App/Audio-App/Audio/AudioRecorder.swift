@@ -1,41 +1,44 @@
 //
 //  AudioRecorder.swift
-//  Week05
+//  Audio-App
 //
-//  Created by qianru zhang on 2024/3/2.
+//  Created by qianru zhang on 2024/3/11.
+//
 //
 
+import Foundation
 import SwiftUI
-import AVFoundation
 import Combine
-
+import AVFoundation
 
 class AudioRecorder: NSObject, ObservableObject {
-    private var audioRecorder: AVAudioRecorder!
-    @Published var recordings = [AudioData]()
-    @Published var isRecording: Bool = false
-    @Published var audioData: [CGFloat] = []
     
     override init() {
+        self.audioData = 0.0
         super.init()
         fetchRecording()
-        
     }
+        
+    var audioRecorder: AVAudioRecorder!
+    
+    @Published var recordings = [Recording]()
+    @Published var recording = false
+    @Published var audioData: CGFloat
+
     
     func startRecording() {
         let recordingSession = AVAudioSession.sharedInstance()
         
         do {
-            try recordingSession.setCategory(.record, mode: .default)
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
         } catch {
             print("Failed to set up recording session")
         }
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        
         let audioFilename = documentPath.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY 'at' HH:mm:ss")).m4a")
-                
+        
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -46,26 +49,23 @@ class AudioRecorder: NSObject, ObservableObject {
         do {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.record()
-            print("Recording starts.")
-            print("Audio file URL: \(audioFilename)")
+
+            recording = true
             
-            //            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            //                self.updateAudioVisualization()
-            //            }
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                self.updateAudioVisualization()
+            }
             
-            isRecording = true
         } catch {
             print("Could not start recording")
         }
     }
     
     func stopRecording() {
-        print("Recording ends.")
-        audioRecorder?.stop()
-        isRecording = false
+        audioRecorder.stop()
+        recording = false
         
         fetchRecording()
-
     }
     
     func fetchRecording() {
@@ -75,40 +75,43 @@ class AudioRecorder: NSObject, ObservableObject {
         let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let directoryContents = try! fileManager.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
         for audio in directoryContents {
-            let recording = AudioData(audio.absoluteString, audio,  getFileDate(for: audio))
+            let recording = Recording(fileURL: audio, createdAt: getFileDate(for: audio))
             recordings.append(recording)
         }
         
         recordings.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
+        
+//        objectWillChange.send(self)
     }
     
-    func updateAudioVisualization() {
-        if (isRecording) {
-            audioRecorder.updateMeters()
+    func deleteRecording(urlsToDelete: [URL]) {
             
-            let power = audioRecorder.averagePower(forChannel: 0)
-            print("Decibels: \(power)")
-            
-            let normalizedPower = 1.0 - pow(10, (power/20.0))
-            // Normalize the power to a value between 0 and
-            print("Normalized Power: \(normalizedPower)")
-            
-            DispatchQueue.main.async {
-                self.audioData.append(CGFloat(normalizedPower))
+        for url in urlsToDelete {
+            print(url)
+            do {
+               try FileManager.default.removeItem(at: url)
+            } catch {
+                print("File could not be deleted!")
             }
         }
-    }
-}
-
-extension Date
-{
-    func toString(dateFormat format: String ) -> String
-    {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: self)
+        
+        fetchRecording()
     }
     
+    private func updateAudioVisualization() {
+        guard let recorder = audioRecorder else { return }
+        if (recording) {
+            recorder.updateMeters()
+            
+            let power = recorder.averagePower(forChannel: 0)
+            print("Decibels: \(power)")
+
+            let normalizedPower = pow(10, (0.05 * power))
+            
+            DispatchQueue.main.async {
+                self.audioData = CGFloat(normalizedPower)
+            }
+        }
+        
+    }
 }
-
-
