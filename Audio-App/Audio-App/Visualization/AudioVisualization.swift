@@ -9,10 +9,21 @@ import SwiftUI
 
 struct AudioVisualization: View {
     @EnvironmentObject var audioRecorder : AudioRecorder
+    var test : CGFloat = 160.0
     var body: some View {
         ZStack {
             Circle()
-                .frame(width : audioRecorder.audioData)
+                .frame(width : test*2, height: test*2)
+                .foregroundColor(.blue)
+                .blur(radius: 50.0)
+                .opacity(0.7)
+            Circle()
+                .frame(width : test*2, height: test*2)
+                .foregroundColor(Color.purpleColor)
+                .blur(radius: 50.0)
+                .opacity(0.5)
+
+
         }
     }
 }

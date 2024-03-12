@@ -106,10 +106,10 @@ class AudioRecorder: NSObject, ObservableObject {
             let power = recorder.averagePower(forChannel: 0)
             print("Decibels: \(power)")
 
-            let normalizedPower = pow(10, (0.05 * power))
+//            let normalizedPower = pow(10, (0.05 * power))
             
             DispatchQueue.main.async {
-                self.audioData = CGFloat(normalizedPower)
+                self.audioData = CGFloat(-power)
             }
         }
         
