@@ -9,20 +9,16 @@
 import SwiftUI
 
 struct RecordingsList: View {
-    
-    @ObservedObject var audioRecorder: AudioRecorder
+    @EnvironmentObject var audioRecorder: AudioRecorder
     
     var body: some View {
         VStack {
-            HeaderView(title: "Data", subtitle: "Your List of Data")
             List {
                 ForEach(audioRecorder.recordings, id: \.createdAt) { recording in
                     RecordingRow(audioURL: recording.fileURL)
                 }
                 .onDelete(perform: delete)
             }
-            
-            // Add EditButton directly to the VStack
             HStack {
                 Spacer()
                 EditButton()
@@ -73,6 +69,7 @@ struct RecordingRow: View {
 
 struct RecordingsList_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingsList(audioRecorder: AudioRecorder())
+        RecordingsList()
+            .environmentObject(AudioRecorder())
     }
 }

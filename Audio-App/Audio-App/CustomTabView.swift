@@ -20,7 +20,7 @@ struct CustomTabView: View {
                 RecorderView()
                     .tag("plus")
                 //
-                RecordingsList(audioRecorder: AudioRecorder())
+                RecordingsList()
                     .tag("folder")
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -64,12 +64,9 @@ struct CustomTabView: View {
 var tabs = ["house",  "plus", "folder"]
 
 struct BottomTabBarView_Previews: PreviewProvider {
-    
     static var previews: some View {
-        
         return CustomTabView()
             .environmentObject(AudioRecorder())
-        
     }
 }
 

@@ -43,13 +43,14 @@ class AudioRecorder: NSObject, ObservableObject {
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
         ]
         
         do {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.isMeteringEnabled = true // Enable metering
             audioRecorder.record()
-
+            print("Recording starts!")
             recording = true
             
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
@@ -64,7 +65,7 @@ class AudioRecorder: NSObject, ObservableObject {
     func stopRecording() {
         audioRecorder.stop()
         recording = false
-        
+        print("Recording ends!")
         fetchRecording()
     }
     
@@ -80,9 +81,7 @@ class AudioRecorder: NSObject, ObservableObject {
         }
         
         recordings.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
-        
-//        objectWillChange.send(self)
-    }
+            }
     
     func deleteRecording(urlsToDelete: [URL]) {
             
@@ -99,17 +98,13 @@ class AudioRecorder: NSObject, ObservableObject {
     }
     
     private func updateAudioVisualization() {
-        guard let recorder = audioRecorder else { return }
-        if (recording) {
-            recorder.updateMeters()
-            
-            let power = recorder.averagePower(forChannel: 0)
+        if (recording) { 
+            audioRecorder.updateMeters()
+            let power = audioRecorder.averagePower(forChannel: 0)
             print("Decibels: \(power)")
-
-//            let normalizedPower = pow(10, (0.05 * power))
-            
+            let data = 160+power
             DispatchQueue.main.async {
-                self.audioData = CGFloat(-power)
+                self.audioData = CGFloat(data)
             }
         }
         

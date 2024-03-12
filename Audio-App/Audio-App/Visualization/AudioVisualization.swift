@@ -9,30 +9,41 @@ import SwiftUI
 
 struct AudioVisualization: View {
     @EnvironmentObject var audioRecorder : AudioRecorder
-    var test : CGFloat = 160.0
     var body: some View {
         ZStack {
             Circle()
-                .frame(width : test*2, height: test*2)
-                .foregroundColor(.blue)
+                .frame(width : audioRecorder.audioData*2.5, height: audioRecorder.audioData*2)
+                .foregroundColor(Color.blueColor)
                 .blur(radius: 50.0)
                 .opacity(0.7)
+                .position(CGPoint(x: 150.0, y: 400.0))
             Circle()
-                .frame(width : test*2, height: test*2)
+                .frame(width : audioRecorder.audioData*3, height: audioRecorder.audioData*2)
                 .foregroundColor(Color.purpleColor)
                 .blur(radius: 50.0)
                 .opacity(0.5)
-
-
+                .position(CGPoint(x: 200.0, y: 250.0))
+            Circle()
+                .frame(width : audioRecorder.audioData*5, height: audioRecorder.audioData*5)
+                .foregroundColor(Color.blueColor)
+                .blur(radius: 100.0)
+                .opacity(0.4)
+                .position(CGPoint(x: 250.0, y: 500.0))
+            Circle()
+                .frame(width : audioRecorder.audioData*1.5, height: audioRecorder.audioData*2)
+                .foregroundColor(Color.purpleColor)
+                .blur(radius: 100.0)
+                .opacity(0.7)
+                .position(CGPoint(x: 250.0, y: 600.0))
         }
     }
 }
 
-struct AudioVisualization_Previews:
-    PreviewProvider {
+struct Visualization_Previews: PreviewProvider {
     static var previews: some View {
         let audioRecorder = AudioRecorder()
-        AudioVisualization().environmentObject(audioRecorder)
+        AudioVisualization()
+            .environmentObject(audioRecorder)
     }
 }
-                                        
+

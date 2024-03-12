@@ -16,10 +16,12 @@ struct RecorderView: View {
     
     var body: some View {
         ZStack{
+            AudioVisualization()
             VStack {
                 HeaderView(title: "Recorder", subtitle: "Record your data today.")
-                Spacer()
+//                RecordingsList(audioRecorder: audioRecorder)
                 
+                Spacer()
                 if audioRecorder.recording == false {
                     Button(action: {self.audioRecorder.startRecording()}) {
                         Image(systemName: "record.circle")
@@ -42,7 +44,6 @@ struct RecorderView: View {
                     }
                 }
             }
-            AudioVisualization()
         }
     }
 }
