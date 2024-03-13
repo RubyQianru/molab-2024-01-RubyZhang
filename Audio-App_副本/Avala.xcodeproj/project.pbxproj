@@ -41,7 +41,7 @@
 		691059C42B9FC71300DE8036 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		691059C62B9FC72A00DE8036 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		691059C82B9FC87000DE8036 /* RecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
-		691B82C32BA214E3004F23C3 /* Audio-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		691B82C32BA214E3004F23C3 /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694A341F2B9FF90B00B1ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694A34202BA10AE200B1ECFD /* MetaMaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskButton.swift; sourceTree = "<group>"; };
 		694A34252BA12BD600B1ECFD /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				69E342592B9FACD500C00DB7 /* Audio-App */,
-				691B82C32BA214E3004F23C3 /* Audio-App.app */,
+				691B82C32BA214E3004F23C3 /* Avala.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69E342562B9FACD500C00DB7 /* Audio-App */ = {
+		69E342562B9FACD500C00DB7 /* Avala */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Audio-App" */;
+			buildConfigurationList = 69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */;
 			buildPhases = (
 				69E342532B9FACD500C00DB7 /* Sources */,
 				69E342542B9FACD500C00DB7 /* Frameworks */,
@@ -184,11 +184,11 @@
 			);
 			dependencies = (
 			);
-			name = "Audio-App";
+			name = Avala;
 			packageProductDependencies = (
 			);
 			productName = "Audio-App";
-			productReference = 691B82C32BA214E3004F23C3 /* Audio-App.app */;
+			productReference = 691B82C32BA214E3004F23C3 /* Avala.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Audio-App" */;
+			buildConfigurationList = 69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,7 +222,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69E342562B9FACD500C00DB7 /* Audio-App */,
+				69E342562B9FACD500C00DB7 /* Avala */,
 			);
 		};
 /* End PBXProject section */
@@ -456,7 +456,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Audio-App" */ = {
+		69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E342632B9FACD600C00DB7 /* Debug */,
@@ -465,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Audio-App" */ = {
+		69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69E342662B9FACD600C00DB7 /* Debug */,
