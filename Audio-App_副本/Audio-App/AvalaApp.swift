@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Audio_AppApp: App {
+struct AvalaApp: App {
     @StateObject var audioRecorder = AudioRecorder()
 
     var body: some Scene {
