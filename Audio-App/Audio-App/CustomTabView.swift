@@ -5,7 +5,6 @@
 //  Created by qianru zhang on 2024/3/2.
 //
 
-
 import SwiftUI
 
 struct CustomTabView: View {
@@ -63,7 +62,7 @@ struct CustomTabView: View {
 
 var tabs = ["house",  "plus", "folder"]
 
-struct BottomTabBarView_Previews: PreviewProvider {
+struct CustomTabView_Previews: PreviewProvider {
     static var previews: some View {
         return CustomTabView()
             .environmentObject(AudioRecorder())

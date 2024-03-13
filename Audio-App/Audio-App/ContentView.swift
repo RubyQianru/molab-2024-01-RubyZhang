@@ -58,9 +58,11 @@ struct ContentView: View {
             }
             .padding()
             .frame(height: 300)
+            MetaMaskButton()
             Spacer(minLength: 0)
         }
         .foregroundColor(.black)
+        
     }
 }
 
