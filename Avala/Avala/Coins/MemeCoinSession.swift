@@ -38,7 +38,6 @@ class MemeCoinViewModel: ObservableObject {
                         DispatchQueue.main.async {
                             self.memeCoinData = memeCoins
                         }
-                        print(memeCoins)
                     } catch {
                         print("Error decoding JSON: \(error)")
                     }

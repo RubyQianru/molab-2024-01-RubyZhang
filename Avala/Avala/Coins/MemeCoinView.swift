@@ -14,20 +14,27 @@ struct CoinView: View {
     var body: some View {
         List(viewModel.memeCoinData, id: \.self) { coin in
             HStack {
-                // UIImage can render files under resource folder
-                
                 let imageName = coin.symbol.uppercased()
-                Image(imageName)
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                    
-                VStack(alignment: .leading) {
-                    Text(coin.name)
-                        .font(.headline)
-                    Text("Symbol: \(coin.symbol)")
-                    Text("Price: \(coin.quotes?.USD.price ?? 0)")
-                    Text("Market Cap: \(coin.quotes?.USD.marketCap ?? 0)")
+                var marketCap: Double {
+                    if let quotes = coin.quotes {
+                        print(quotes.USD.marketCap)
+                        return quotes.USD.marketCap
+                    } else {
+                        return 0.0
+                    }
                 }
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .position(CGPoint(x:10, y:marketCap))
+                
+                //                VStack(alignment: .leading) {
+                //                    Text(coin.name)
+                //                        .font(.headline)
+                //                    Text("Symbol: \(coin.symbol)")
+                //                    Text("Price: \(coin.quotes?.USD.price ?? 0)")
+                //                    Text("Market Cap: \(coin.quotes?.USD.marketCap ?? 0)")
+                //                }
             }
         }
         .onAppear {
