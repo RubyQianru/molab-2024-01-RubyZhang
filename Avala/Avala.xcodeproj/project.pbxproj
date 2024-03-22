@@ -7,59 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		691059BC2B9FC69900DE8036 /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059BB2B9FC69900DE8036 /* RecordingList.swift */; };
-		691059BF2B9FC6BF00DE8036 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059BE2B9FC6BF00DE8036 /* AudioRecorder.swift */; };
-		691059C12B9FC6E300DE8036 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059C02B9FC6E300DE8036 /* AudioPlayer.swift */; };
-		691059C32B9FC6FF00DE8036 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059C22B9FC6FF00DE8036 /* RecordingDataModel.swift */; };
-		691059C52B9FC71400DE8036 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059C42B9FC71300DE8036 /* Extensions.swift */; };
-		691059C72B9FC72A00DE8036 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059C62B9FC72A00DE8036 /* Helper.swift */; };
-		691059C92B9FC87000DE8036 /* RecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691059C82B9FC87000DE8036 /* RecorderView.swift */; };
-		694A34212BA10AE200B1ECFD /* MetaMaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694A34202BA10AE200B1ECFD /* MetaMaskButton.swift */; };
-		694A34262BA12BD600B1ECFD /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694A34252BA12BD600B1ECFD /* Handler.swift */; };
-		694A343C2BA1344F00B1ECFD /* TextSyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694A343B2BA1344F00B1ECFD /* TextSyles.swift */; };
-		694A343E2BA1346400B1ECFD /* Curvature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694A343D2BA1346400B1ECFD /* Curvature.swift */; };
-		694A34402BA1348300B1ECFD /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694A343F2BA1348300B1ECFD /* ButtonStyle.swift */; };
-		69CCF6D52B9FD72600CB0E2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCF6D42B9FD72600CB0E2D /* ViewController.swift */; };
-		69CCF6D72B9FD74700CB0E2D /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCF6D62B9FD74700CB0E2D /* VideoView.swift */; };
-		69CCF6DE2B9FD9E500CB0E2D /* AudioVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCF6DD2B9FD9E500CB0E2D /* AudioVisualization.swift */; };
-		69E3425B2B9FACD500C00DB7 /* AvalaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3425A2B9FACD500C00DB7 /* AvalaApp.swift */; };
-		69E3425F2B9FACD600C00DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E3425E2B9FACD600C00DB7 /* Assets.xcassets */; };
-		69E342622B9FACD600C00DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E342612B9FACD600C00DB7 /* Preview Assets.xcassets */; };
-		69E342712B9FAD0D00C00DB7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3426A2B9FAD0D00C00DB7 /* Color.swift */; };
-		69E342722B9FAD0D00C00DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3426B2B9FAD0D00C00DB7 /* ContentView.swift */; };
-		69E342732B9FAD0D00C00DB7 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3426C2B9FAD0D00C00DB7 /* TabButtonView.swift */; };
-		69E342742B9FAD0D00C00DB7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3426D2B9FAD0D00C00DB7 /* CustomTabView.swift */; };
-		69E342752B9FAD0D00C00DB7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3426E2B9FAD0D00C00DB7 /* Header.swift */; };
-		69E342762B9FAD0D00C00DB7 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E342702B9FAD0D00C00DB7 /* LineGraph.swift */; };
+		697BA46A2BA2188700FA6726 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44B2BA2188700FA6726 /* LineGraph.swift */; };
+		697BA46B2BA2188700FA6726 /* AudioVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44C2BA2188700FA6726 /* AudioVisualization.swift */; };
+		697BA46C2BA2188700FA6726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44E2BA2188700FA6726 /* ViewController.swift */; };
+		697BA46D2BA2188700FA6726 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44F2BA2188700FA6726 /* VideoView.swift */; };
+		697BA46E2BA2188700FA6726 /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4502BA2188700FA6726 /* RecordingList.swift */; };
+		697BA46F2BA2188700FA6726 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4522BA2188700FA6726 /* Color.swift */; };
+		697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4532BA2188700FA6726 /* CustomTabView.swift */; };
+		697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4542BA2188700FA6726 /* Assets.xcassets */; };
+		697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4562BA2188700FA6726 /* Preview Assets.xcassets */; };
+		697BA4732BA2188700FA6726 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4572BA2188700FA6726 /* Header.swift */; };
+		697BA4742BA2188700FA6726 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4592BA2188700FA6726 /* AudioPlayer.swift */; };
+		697BA4752BA2188700FA6726 /* RecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA45A2BA2188700FA6726 /* RecorderView.swift */; };
+		697BA4762BA2188700FA6726 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA45B2BA2188700FA6726 /* Extensions.swift */; };
+		697BA4772BA2188700FA6726 /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA45C2BA2188700FA6726 /* RecordingDataModel.swift */; };
+		697BA4782BA2188700FA6726 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA45D2BA2188700FA6726 /* Helper.swift */; };
+		697BA4792BA2188700FA6726 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA45E2BA2188700FA6726 /* AudioRecorder.swift */; };
+		697BA47A2BA2188700FA6726 /* TextSyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4612BA2188700FA6726 /* TextSyles.swift */; };
+		697BA47B2BA2188700FA6726 /* Curvature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4622BA2188700FA6726 /* Curvature.swift */; };
+		697BA47C2BA2188700FA6726 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4632BA2188700FA6726 /* ButtonStyle.swift */; };
+		697BA47D2BA2188700FA6726 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4642BA2188700FA6726 /* Handler.swift */; };
+		697BA47E2BA2188700FA6726 /* MetaMaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4652BA2188700FA6726 /* MetaMaskButton.swift */; };
+		697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4662BA2188700FA6726 /* TabButtonView.swift */; };
+		697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4672BA2188700FA6726 /* AvalaApp.swift */; };
+		697BA4812BA2188700FA6726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4682BA2188700FA6726 /* ContentView.swift */; };
+		697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */; };
+		697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4872BA21DED00FA6726 /* MemeCoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		691059BB2B9FC69900DE8036 /* RecordingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
-		691059BE2B9FC6BF00DE8036 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
-		691059C02B9FC6E300DE8036 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		691059C22B9FC6FF00DE8036 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
-		691059C42B9FC71300DE8036 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		691059C62B9FC72A00DE8036 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		691059C82B9FC87000DE8036 /* RecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
-		691B82C32BA214E3004F23C3 /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		694A341F2B9FF90B00B1ECFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		694A34202BA10AE200B1ECFD /* MetaMaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskButton.swift; sourceTree = "<group>"; };
-		694A34252BA12BD600B1ECFD /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
-		694A343B2BA1344F00B1ECFD /* TextSyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSyles.swift; sourceTree = "<group>"; };
-		694A343D2BA1346400B1ECFD /* Curvature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curvature.swift; sourceTree = "<group>"; };
-		694A343F2BA1348300B1ECFD /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		69CCF6D42B9FD72600CB0E2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		69CCF6D62B9FD74700CB0E2D /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		69CCF6DD2B9FD9E500CB0E2D /* AudioVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualization.swift; sourceTree = "<group>"; };
-		69E3425A2B9FACD500C00DB7 /* AvalaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvalaApp.swift; sourceTree = "<group>"; };
-		69E3425E2B9FACD600C00DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69E342612B9FACD600C00DB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		69E3426A2B9FAD0D00C00DB7 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		69E3426B2B9FAD0D00C00DB7 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		69E3426C2B9FAD0D00C00DB7 /* TabButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
-		69E3426D2B9FAD0D00C00DB7 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
-		69E3426E2B9FAD0D00C00DB7 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		69E342702B9FAD0D00C00DB7 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		697BA44B2BA2188700FA6726 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		697BA44C2BA2188700FA6726 /* AudioVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVisualization.swift; sourceTree = "<group>"; };
+		697BA44E2BA2188700FA6726 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		697BA44F2BA2188700FA6726 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		697BA4502BA2188700FA6726 /* RecordingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
+		697BA4522BA2188700FA6726 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		697BA4532BA2188700FA6726 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		697BA4542BA2188700FA6726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		697BA4562BA2188700FA6726 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		697BA4572BA2188700FA6726 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		697BA4592BA2188700FA6726 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		697BA45A2BA2188700FA6726 /* RecorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
+		697BA45B2BA2188700FA6726 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		697BA45C2BA2188700FA6726 /* RecordingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
+		697BA45D2BA2188700FA6726 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		697BA45E2BA2188700FA6726 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		697BA4612BA2188700FA6726 /* TextSyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSyles.swift; sourceTree = "<group>"; };
+		697BA4622BA2188700FA6726 /* Curvature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curvature.swift; sourceTree = "<group>"; };
+		697BA4632BA2188700FA6726 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		697BA4642BA2188700FA6726 /* Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
+		697BA4652BA2188700FA6726 /* MetaMaskButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaMaskButton.swift; sourceTree = "<group>"; };
+		697BA4662BA2188700FA6726 /* TabButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		697BA4672BA2188700FA6726 /* AvalaApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvalaApp.swift; sourceTree = "<group>"; };
+		697BA4682BA2188700FA6726 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		697BA4832BA218F700FA6726 /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinSession.swift; sourceTree = "<group>"; };
+		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,100 +76,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		691059BD2B9FC6A700DE8036 /* Audio */ = {
+		697BA4492BA2188700FA6726 /* Avala */ = {
 			isa = PBXGroup;
 			children = (
-				691059BE2B9FC6BF00DE8036 /* AudioRecorder.swift */,
-				691059C82B9FC87000DE8036 /* RecorderView.swift */,
-				691059C02B9FC6E300DE8036 /* AudioPlayer.swift */,
-				691059C22B9FC6FF00DE8036 /* RecordingDataModel.swift */,
-				691059C42B9FC71300DE8036 /* Extensions.swift */,
-				691059C62B9FC72A00DE8036 /* Helper.swift */,
+				697BA4502BA2188700FA6726 /* RecordingList.swift */,
+				697BA4572BA2188700FA6726 /* Header.swift */,
+				697BA4662BA2188700FA6726 /* TabButtonView.swift */,
+				697BA4672BA2188700FA6726 /* AvalaApp.swift */,
+				697BA4682BA2188700FA6726 /* ContentView.swift */,
+				697BA4532BA2188700FA6726 /* CustomTabView.swift */,
+				697BA44A2BA2188700FA6726 /* Visualization */,
+				697BA44D2BA2188700FA6726 /* Video */,
+				697BA4512BA2188700FA6726 /* Color */,
+				697BA4842BA21D7600FA6726 /* Coins */,
+				697BA4542BA2188700FA6726 /* Assets.xcassets */,
+				697BA4552BA2188700FA6726 /* Preview Content */,
+				697BA4582BA2188700FA6726 /* Audio */,
+				697BA45F2BA2188700FA6726 /* MetaMask */,
+			);
+			path = Avala;
+			sourceTree = "<group>";
+		};
+		697BA44A2BA2188700FA6726 /* Visualization */ = {
+			isa = PBXGroup;
+			children = (
+				697BA44B2BA2188700FA6726 /* LineGraph.swift */,
+				697BA44C2BA2188700FA6726 /* AudioVisualization.swift */,
+			);
+			path = Visualization;
+			sourceTree = "<group>";
+		};
+		697BA44D2BA2188700FA6726 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				697BA44E2BA2188700FA6726 /* ViewController.swift */,
+				697BA44F2BA2188700FA6726 /* VideoView.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		697BA4512BA2188700FA6726 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4522BA2188700FA6726 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		697BA4552BA2188700FA6726 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4562BA2188700FA6726 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		697BA4582BA2188700FA6726 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4592BA2188700FA6726 /* AudioPlayer.swift */,
+				697BA45A2BA2188700FA6726 /* RecorderView.swift */,
+				697BA45B2BA2188700FA6726 /* Extensions.swift */,
+				697BA45C2BA2188700FA6726 /* RecordingDataModel.swift */,
+				697BA45D2BA2188700FA6726 /* Helper.swift */,
+				697BA45E2BA2188700FA6726 /* AudioRecorder.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		694A34272BA12BE900B1ECFD /* MetaMask */ = {
+		697BA45F2BA2188700FA6726 /* MetaMask */ = {
 			isa = PBXGroup;
 			children = (
-				694A34202BA10AE200B1ECFD /* MetaMaskButton.swift */,
-				694A34252BA12BD600B1ECFD /* Handler.swift */,
-				694A343A2BA1343C00B1ECFD /* Modifiers */,
+				697BA4602BA2188700FA6726 /* Modifiers */,
+				697BA4642BA2188700FA6726 /* Handler.swift */,
+				697BA4652BA2188700FA6726 /* MetaMaskButton.swift */,
 			);
 			path = MetaMask;
 			sourceTree = "<group>";
 		};
-		694A343A2BA1343C00B1ECFD /* Modifiers */ = {
+		697BA4602BA2188700FA6726 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				694A343B2BA1344F00B1ECFD /* TextSyles.swift */,
-				694A343F2BA1348300B1ECFD /* ButtonStyle.swift */,
-				694A343D2BA1346400B1ECFD /* Curvature.swift */,
+				697BA4612BA2188700FA6726 /* TextSyles.swift */,
+				697BA4622BA2188700FA6726 /* Curvature.swift */,
+				697BA4632BA2188700FA6726 /* ButtonStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		69CCF6D32B9FD5BF00CB0E2D /* Video */ = {
+		697BA4842BA21D7600FA6726 /* Coins */ = {
 			isa = PBXGroup;
 			children = (
-				69CCF6D42B9FD72600CB0E2D /* ViewController.swift */,
-				69CCF6D62B9FD74700CB0E2D /* VideoView.swift */,
+				697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */,
+				697BA4872BA21DED00FA6726 /* MemeCoinView.swift */,
 			);
-			path = Video;
+			path = Coins;
 			sourceTree = "<group>";
 		};
 		69E3424E2B9FACD500C00DB7 = {
 			isa = PBXGroup;
 			children = (
-				69E342592B9FACD500C00DB7 /* Audio-App */,
-				691B82C32BA214E3004F23C3 /* Avala.app */,
+				697BA4492BA2188700FA6726 /* Avala */,
+				697BA4832BA218F700FA6726 /* Avala.app */,
 			);
-			sourceTree = "<group>";
-		};
-		69E342592B9FACD500C00DB7 /* Audio-App */ = {
-			isa = PBXGroup;
-			children = (
-				69CCF6D32B9FD5BF00CB0E2D /* Video */,
-				69E342692B9FAD0D00C00DB7 /* Color */,
-				69E3426B2B9FAD0D00C00DB7 /* ContentView.swift */,
-				69E3426D2B9FAD0D00C00DB7 /* CustomTabView.swift */,
-				69E3426E2B9FAD0D00C00DB7 /* Header.swift */,
-				694A34272BA12BE900B1ECFD /* MetaMask */,
-				69E3426C2B9FAD0D00C00DB7 /* TabButtonView.swift */,
-				691059BB2B9FC69900DE8036 /* RecordingList.swift */,
-				691059BD2B9FC6A700DE8036 /* Audio */,
-				69E3426F2B9FAD0D00C00DB7 /* Visualization */,
-				69E3425A2B9FACD500C00DB7 /* AvalaApp.swift */,
-				69E3425E2B9FACD600C00DB7 /* Assets.xcassets */,
-				69E342602B9FACD600C00DB7 /* Preview Content */,
-				694A341F2B9FF90B00B1ECFD /* Info.plist */,
-			);
-			path = "Audio-App";
-			sourceTree = "<group>";
-		};
-		69E342602B9FACD600C00DB7 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				69E342612B9FACD600C00DB7 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		69E342692B9FAD0D00C00DB7 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				69E3426A2B9FAD0D00C00DB7 /* Color.swift */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
-		69E3426F2B9FAD0D00C00DB7 /* Visualization */ = {
-			isa = PBXGroup;
-			children = (
-				69E342702B9FAD0D00C00DB7 /* LineGraph.swift */,
-				69CCF6DD2B9FD9E500CB0E2D /* AudioVisualization.swift */,
-			);
-			path = Visualization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +200,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Audio-App";
-			productReference = 691B82C32BA214E3004F23C3 /* Avala.app */;
+			productReference = 697BA4832BA218F700FA6726 /* Avala.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +228,6 @@
 			);
 			mainGroup = 69E3424E2B9FACD500C00DB7;
 			packageReferences = (
-				694A34222BA12B3800B1ECFD /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */,
 			);
 			productRefGroup = 69E3424E2B9FACD500C00DB7;
 			projectDirPath = "";
@@ -232,8 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E342622B9FACD600C00DB7 /* Preview Assets.xcassets in Resources */,
-				69E3425F2B9FACD600C00DB7 /* Assets.xcassets in Resources */,
+				697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */,
+				697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,28 +255,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69CCF6D52B9FD72600CB0E2D /* ViewController.swift in Sources */,
-				69E3425B2B9FACD500C00DB7 /* AvalaApp.swift in Sources */,
-				694A34212BA10AE200B1ECFD /* MetaMaskButton.swift in Sources */,
-				69CCF6DE2B9FD9E500CB0E2D /* AudioVisualization.swift in Sources */,
-				691059C72B9FC72A00DE8036 /* Helper.swift in Sources */,
-				69E342732B9FAD0D00C00DB7 /* TabButtonView.swift in Sources */,
-				691059C12B9FC6E300DE8036 /* AudioPlayer.swift in Sources */,
-				691059C32B9FC6FF00DE8036 /* RecordingDataModel.swift in Sources */,
-				69E342752B9FAD0D00C00DB7 /* Header.swift in Sources */,
-				691059C92B9FC87000DE8036 /* RecorderView.swift in Sources */,
-				694A343C2BA1344F00B1ECFD /* TextSyles.swift in Sources */,
-				69E342762B9FAD0D00C00DB7 /* LineGraph.swift in Sources */,
-				691059BF2B9FC6BF00DE8036 /* AudioRecorder.swift in Sources */,
-				691059C52B9FC71400DE8036 /* Extensions.swift in Sources */,
-				69E342742B9FAD0D00C00DB7 /* CustomTabView.swift in Sources */,
-				69CCF6D72B9FD74700CB0E2D /* VideoView.swift in Sources */,
-				69E342722B9FAD0D00C00DB7 /* ContentView.swift in Sources */,
-				691059BC2B9FC69900DE8036 /* RecordingList.swift in Sources */,
-				694A34402BA1348300B1ECFD /* ButtonStyle.swift in Sources */,
-				694A343E2BA1346400B1ECFD /* Curvature.swift in Sources */,
-				69E342712B9FAD0D00C00DB7 /* Color.swift in Sources */,
-				694A34262BA12BD600B1ECFD /* Handler.swift in Sources */,
+				697BA4732BA2188700FA6726 /* Header.swift in Sources */,
+				697BA46E2BA2188700FA6726 /* RecordingList.swift in Sources */,
+				697BA4742BA2188700FA6726 /* AudioPlayer.swift in Sources */,
+				697BA4772BA2188700FA6726 /* RecordingDataModel.swift in Sources */,
+				697BA46D2BA2188700FA6726 /* VideoView.swift in Sources */,
+				697BA46C2BA2188700FA6726 /* ViewController.swift in Sources */,
+				697BA47D2BA2188700FA6726 /* Handler.swift in Sources */,
+				697BA46A2BA2188700FA6726 /* LineGraph.swift in Sources */,
+				697BA47C2BA2188700FA6726 /* ButtonStyle.swift in Sources */,
+				697BA4752BA2188700FA6726 /* RecorderView.swift in Sources */,
+				697BA4792BA2188700FA6726 /* AudioRecorder.swift in Sources */,
+				697BA47A2BA2188700FA6726 /* TextSyles.swift in Sources */,
+				697BA4812BA2188700FA6726 /* ContentView.swift in Sources */,
+				697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */,
+				697BA46B2BA2188700FA6726 /* AudioVisualization.swift in Sources */,
+				697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */,
+				697BA47B2BA2188700FA6726 /* Curvature.swift in Sources */,
+				697BA47E2BA2188700FA6726 /* MetaMaskButton.swift in Sources */,
+				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
+				697BA4782BA2188700FA6726 /* Helper.swift in Sources */,
+				697BA4762BA2188700FA6726 /* Extensions.swift in Sources */,
+				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,
+				697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */,
+				697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +411,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Audio-App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = D5BR9CH9RX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Audio-App/Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -429,11 +442,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Audio-App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = D5BR9CH9RX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Audio-App/Info.plist";
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -475,17 +488,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		694A34222BA12B3800B1ECFD /* XCRemoteSwiftPackageReference "metamask-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MetaMask/metamask-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 69E3424F2B9FACD500C00DB7 /* Project object */;
 }
