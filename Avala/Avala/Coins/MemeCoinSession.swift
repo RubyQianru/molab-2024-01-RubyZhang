@@ -24,6 +24,7 @@ class MemeCoinViewModel: ObservableObject {
         request.allHTTPHeaderFields = headers
         
         let session = URLSession.shared
+        let memeSet : Set<String> = ["DOGE", "WIF", "BONK", "SHIB", "FLOKI", "CORGIAI", "BOME", "MEME", "BABYDOGE", "COQ"]
         let dataTask = session.dataTask(with: request as URLRequest) { [weak self] (data, response, error) in
             guard let self = self else { return }
             
@@ -34,7 +35,7 @@ class MemeCoinViewModel: ObservableObject {
                     do {
                         let decoder = JSONDecoder()
                         let coinData = try decoder.decode([MemeCoin].self, from: data)
-                        let memeCoins = coinData.filter { $0.symbol == "DOGE" || $0.name == "Pepe" || $0.symbol == "WIF" || $0.symbol == "BONK" || $0.symbol == "SHIB"}
+                        let memeCoins = coinData.filter { memeSet.contains($0.symbol ) || $0.name == "Pepe"  }
                         DispatchQueue.main.async {
                             self.memeCoinData = memeCoins
                         }
@@ -68,6 +69,10 @@ struct USDQuote: Codable, Hashable {
         case price = "price"
         case marketCap = "market_cap"
     }
+}
+
+struct CoinURL: URL {
+    let link: URL
 }
 
 

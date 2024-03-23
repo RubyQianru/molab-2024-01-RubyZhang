@@ -10,38 +10,56 @@ import SwiftUI
 
 struct CoinView: View {
     @StateObject var viewModel = MemeCoinViewModel()
+    let maxExpectedMarketCap: Double = 18000000000.0
     
     var body: some View {
-        List(viewModel.memeCoinData, id: \.self) { coin in
-            HStack {
-                let imageName = coin.symbol.uppercased()
-                var marketCap: Double {
-                    if let quotes = coin.quotes {
-                        print(quotes.USD.marketCap)
-                        return quotes.USD.marketCap
-                    } else {
-                        return 0.0
+        VStack{
+            HeaderView(title: "Meme Coins", subtitle: "How do your meme coins perform?")
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                Spacer()
+                HStack(spacing: 50) {
+                    ForEach(viewModel.memeCoinData, id: \.self) { coin in
+                        var marketCap: Double {
+                            if let quotes = coin.quotes {
+                                return quotes.USD.marketCap
+                            } else {
+                                return 0.0
+                            }
+                        }
+                        GeometryReader { geometry in
+                            VStack {
+                                Rectangle()
+                                    .fill(Color.blueColor)
+                                    .frame(width: 0, height: geometry.size.height - scaledHeight(for: marketCap, in: geometry.size.height))
+                                
+                                Image(coin.symbol.uppercased())
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Rectangle()
+                                    .fill(Color.blue)
+                                    .frame(width: 50, height: geometry.size.height)
+                                
+                            }
+                        }
                     }
+                    
                 }
-                Image(imageName)
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .position(CGPoint(x:10, y:marketCap))
-                
-                //                VStack(alignment: .leading) {
-                //                    Text(coin.name)
-                //                        .font(.headline)
-                //                    Text("Symbol: \(coin.symbol)")
-                //                    Text("Price: \(coin.quotes?.USD.price ?? 0)")
-                //                    Text("Market Cap: \(coin.quotes?.USD.marketCap ?? 0)")
-                //                }
             }
+            .onAppear {
+                viewModel.fetchMemeCoinData()
+            }
+            .padding()
         }
-        .onAppear {
-            // Trigger the data fetch when the view appears
-            viewModel.fetchMemeCoinData()
-        }
+        .ignoresSafeArea(.all, edges: .bottom)
+        
     }
+    
+    private func scaledHeight(for marketCap: Double, in maxHeight: CGFloat) -> CGFloat {
+        let scalingFactor = marketCap / maxExpectedMarketCap
+        return CGFloat(scalingFactor) * maxHeight
+    }
+    
 }
 
 struct CoinView_Previews: PreviewProvider {
