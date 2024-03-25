@@ -71,8 +71,4 @@ struct USDQuote: Codable, Hashable {
     }
 }
 
-struct CoinURL: URL {
-    let link: URL
-}
-
 
