@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CoinView: View {
     @StateObject var viewModel = MemeCoinViewModel()
-    let maxExpectedMarketCap: Double = 18000000000.0
+    let maxExpectedMarketCap: Double = 21000000000.0
     
     var body: some View {
         VStack{
@@ -31,11 +31,19 @@ struct CoinView: View {
                             VStack {
                                 Rectangle()
                                     .fill(Color.blueColor)
-                                    .frame(width: 0, height: geometry.size.height - scaledHeight(for: marketCap, in: geometry.size.height))
+                                    .frame(width: 0, height: geometry.size.height - scaledHeight(for: marketCap, in: geometry.size.height)-30)
                                 
-                                Image(coin.symbol.uppercased())
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
+                                if let urlString = coin.url, let url = URL(string: urlString) {
+                                    Link(destination: url) {
+                                        Image(coin.symbol.uppercased())
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                } else {
+                                    Image(coin.symbol.uppercased())
+                                        .resizable()
+                                        .frame(width: 50, height: 50)
+                                }
                                 Rectangle()
                                     .fill(Color.blue)
                                     .frame(width: 50, height: geometry.size.height)

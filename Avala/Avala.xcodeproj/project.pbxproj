@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		697BA46A2BA2188700FA6726 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44B2BA2188700FA6726 /* LineGraph.swift */; };
 		697BA46B2BA2188700FA6726 /* AudioVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44C2BA2188700FA6726 /* AudioVisualization.swift */; };
-		697BA46C2BA2188700FA6726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44E2BA2188700FA6726 /* ViewController.swift */; };
-		697BA46D2BA2188700FA6726 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA44F2BA2188700FA6726 /* VideoView.swift */; };
 		697BA46E2BA2188700FA6726 /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4502BA2188700FA6726 /* RecordingList.swift */; };
 		697BA46F2BA2188700FA6726 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4522BA2188700FA6726 /* Color.swift */; };
 		697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4532BA2188700FA6726 /* CustomTabView.swift */; };
@@ -38,8 +36,6 @@
 /* Begin PBXFileReference section */
 		697BA44B2BA2188700FA6726 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		697BA44C2BA2188700FA6726 /* AudioVisualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVisualization.swift; sourceTree = "<group>"; };
-		697BA44E2BA2188700FA6726 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		697BA44F2BA2188700FA6726 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		697BA4502BA2188700FA6726 /* RecordingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
 		697BA4522BA2188700FA6726 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		697BA4532BA2188700FA6726 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
@@ -86,7 +82,6 @@
 				697BA4682BA2188700FA6726 /* ContentView.swift */,
 				697BA4532BA2188700FA6726 /* CustomTabView.swift */,
 				697BA44A2BA2188700FA6726 /* Visualization */,
-				697BA44D2BA2188700FA6726 /* Video */,
 				697BA4512BA2188700FA6726 /* Color */,
 				697BA4842BA21D7600FA6726 /* Coins */,
 				697BA4542BA2188700FA6726 /* Assets.xcassets */,
@@ -104,15 +99,6 @@
 				697BA44C2BA2188700FA6726 /* AudioVisualization.swift */,
 			);
 			path = Visualization;
-			sourceTree = "<group>";
-		};
-		697BA44D2BA2188700FA6726 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				697BA44E2BA2188700FA6726 /* ViewController.swift */,
-				697BA44F2BA2188700FA6726 /* VideoView.swift */,
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 		697BA4512BA2188700FA6726 /* Color */ = {
@@ -259,8 +245,6 @@
 				697BA46E2BA2188700FA6726 /* RecordingList.swift in Sources */,
 				697BA4742BA2188700FA6726 /* AudioPlayer.swift in Sources */,
 				697BA4772BA2188700FA6726 /* RecordingDataModel.swift in Sources */,
-				697BA46D2BA2188700FA6726 /* VideoView.swift in Sources */,
-				697BA46C2BA2188700FA6726 /* ViewController.swift in Sources */,
 				697BA47D2BA2188700FA6726 /* Handler.swift in Sources */,
 				697BA46A2BA2188700FA6726 /* LineGraph.swift in Sources */,
 				697BA47C2BA2188700FA6726 /* ButtonStyle.swift in Sources */,

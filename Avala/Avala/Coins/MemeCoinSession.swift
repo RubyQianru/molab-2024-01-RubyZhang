@@ -35,7 +35,12 @@ class MemeCoinViewModel: ObservableObject {
                     do {
                         let decoder = JSONDecoder()
                         let coinData = try decoder.decode([MemeCoin].self, from: data)
-                        let memeCoins = coinData.filter { memeSet.contains($0.symbol ) || $0.name == "Pepe"  }
+                        let memeCoins = coinData.filter { memeSet.contains($0.symbol ) || $0.name == "Pepe"  }.map { coin -> MemeCoin in
+                            var modifiedCoin = coin
+                            let urlString = "https://www.coingecko.com/en/coins/\(coin.name.lowercased())"
+                            modifiedCoin.url = urlString
+                            return modifiedCoin
+                        }
                         DispatchQueue.main.async {
                             self.memeCoinData = memeCoins
                         }
@@ -55,6 +60,7 @@ struct MemeCoin: Codable, Hashable {
     let name: String
     let symbol: String
     let quotes: Quote?
+    var url: String?
 }
 
 struct Quote: Codable, Hashable {
