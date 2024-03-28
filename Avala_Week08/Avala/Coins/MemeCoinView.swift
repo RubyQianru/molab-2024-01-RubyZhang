@@ -30,7 +30,6 @@ struct CoinView: View {
                         GeometryReader { geometry in
                             VStack {
                                 Rectangle()
-                                    .fill(Color.blueColor)
                                     .frame(width: 0, height: geometry.size.height - scaledHeight(for: marketCap, in: geometry.size.height)-30)
                                 
                                 if let urlString = coin.url, let url = URL(string: urlString) {
@@ -45,7 +44,7 @@ struct CoinView: View {
                                         .frame(width: 50, height: 50)
                                 }
                                 Rectangle()
-                                    .fill(Color.blue)
+                                    .fill(Color.purpleColor)
                                     .frame(width: 50, height: geometry.size.height)
                                 
                             }
@@ -58,8 +57,8 @@ struct CoinView: View {
                 viewModel.fetchMemeCoinData()
             }
             .padding()
+            Spacer()
         }
-        .ignoresSafeArea(.all, edges: .bottom)
         
     }
     
