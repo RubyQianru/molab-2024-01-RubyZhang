@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		697BA46F2BA2188700FA6726 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4522BA2188700FA6726 /* Color.swift */; };
+		697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4532BA2188700FA6726 /* CustomTabView.swift */; };
+		697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4542BA2188700FA6726 /* Assets.xcassets */; };
+		697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4562BA2188700FA6726 /* Preview Assets.xcassets */; };
+		697BA4732BA2188700FA6726 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4572BA2188700FA6726 /* Header.swift */; };
+		697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4662BA2188700FA6726 /* TabButtonView.swift */; };
+		697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4672BA2188700FA6726 /* AvalaApp.swift */; };
+		697BA4812BA2188700FA6726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4682BA2188700FA6726 /* ContentView.swift */; };
+		697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */; };
+		697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4872BA21DED00FA6726 /* MemeCoinView.swift */; };
+		698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */; };
+		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
+		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		697BA4522BA2188700FA6726 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		697BA4532BA2188700FA6726 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		697BA4542BA2188700FA6726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		697BA4562BA2188700FA6726 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		697BA4572BA2188700FA6726 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		697BA4662BA2188700FA6726 /* TabButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		697BA4672BA2188700FA6726 /* AvalaApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvalaApp.swift; sourceTree = "<group>"; };
+		697BA4682BA2188700FA6726 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		697BA4832BA218F700FA6726 /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinSession.swift; sourceTree = "<group>"; };
+		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
+		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
+		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69E342542B9FACD500C00DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		697BA4492BA2188700FA6726 /* Avala */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4572BA2188700FA6726 /* Header.swift */,
+				697BA4662BA2188700FA6726 /* TabButtonView.swift */,
+				697BA4672BA2188700FA6726 /* AvalaApp.swift */,
+				697BA4682BA2188700FA6726 /* ContentView.swift */,
+				697BA4532BA2188700FA6726 /* CustomTabView.swift */,
+				698C41E02BB5CA8800392264 /* dApp */,
+				697BA4512BA2188700FA6726 /* Color */,
+				697BA4842BA21D7600FA6726 /* Coins */,
+				697BA4542BA2188700FA6726 /* Assets.xcassets */,
+				697BA4552BA2188700FA6726 /* Preview Content */,
+			);
+			path = Avala;
+			sourceTree = "<group>";
+		};
+		697BA4512BA2188700FA6726 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4522BA2188700FA6726 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		697BA4552BA2188700FA6726 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4562BA2188700FA6726 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		697BA4842BA21D7600FA6726 /* Coins */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */,
+				697BA4872BA21DED00FA6726 /* MemeCoinView.swift */,
+			);
+			path = Coins;
+			sourceTree = "<group>";
+		};
+		698C41E02BB5CA8800392264 /* dApp */ = {
+			isa = PBXGroup;
+			children = (
+				698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */,
+				698C41E92BB5CCCA00392264 /* ConnectView.swift */,
+			);
+			path = dApp;
+			sourceTree = "<group>";
+		};
+		69E3424E2B9FACD500C00DB7 = {
+			isa = PBXGroup;
+			children = (
+				697BA4492BA2188700FA6726 /* Avala */,
+				697BA4832BA218F700FA6726 /* Avala.app */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69E342562B9FACD500C00DB7 /* Avala */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */;
+			buildPhases = (
+				69E342532B9FACD500C00DB7 /* Sources */,
+				69E342542B9FACD500C00DB7 /* Frameworks */,
+				69E342552B9FACD500C00DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Avala;
+			packageProductDependencies = (
+				698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */,
+			);
+			productName = "Audio-App";
+			productReference = 697BA4832BA218F700FA6726 /* Avala.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69E3424F2B9FACD500C00DB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					69E342562B9FACD500C00DB7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69E3424E2B9FACD500C00DB7;
+			packageReferences = (
+				698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */,
+			);
+			productRefGroup = 69E3424E2B9FACD500C00DB7;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69E342562B9FACD500C00DB7 /* Avala */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69E342552B9FACD500C00DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */,
+				697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69E342532B9FACD500C00DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697BA4732BA2188700FA6726 /* Header.swift in Sources */,
+				697BA4812BA2188700FA6726 /* ContentView.swift in Sources */,
+				697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */,
+				698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */,
+				698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */,
+				697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */,
+				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
+				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,
+				697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */,
+				697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		69E342632B9FACD600C00DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69E342642B9FACD600C00DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69E342662B9FACD600C00DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D5BR9CH9RX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruby.Audio-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69E342672B9FACD600C00DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D5BR9CH9RX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ruby.Audio-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E342632B9FACD600C00DB7 /* Debug */,
+				69E342642B9FACD600C00DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E342662B9FACD600C00DB7 /* Debug */,
+				69E342672B9FACD600C00DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MobileWalletProtocol/wallet-mobile-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */;
+			productName = CoinbaseWalletSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 69E3424F2B9FACD500C00DB7 /* Project object */;
+}
