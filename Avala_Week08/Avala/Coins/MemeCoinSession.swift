@@ -10,7 +10,8 @@ import SwiftUI
 // Define your view model
 class MemeCoinViewModel: ObservableObject {
     @Published var memeCoinData: [MemeCoin] = [] // Assuming MemeCoin is a struct representing meme coin data
-    
+    @Published var isDataLoaded = false
+
     func fetchMemeCoinData() {
         let headers = [
             "X-RapidAPI-Key": "d25eb9279amshfda026b08d9a984p1ea465jsn603867ae7669",
@@ -43,6 +44,8 @@ class MemeCoinViewModel: ObservableObject {
                         }
                         DispatchQueue.main.async {
                             self.memeCoinData = memeCoins
+                            self.isDataLoaded = true
+
                         }
                     } catch {
                         print("Error decoding JSON: \(error)")
