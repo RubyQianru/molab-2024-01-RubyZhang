@@ -7,6 +7,8 @@
 
 
 import SwiftUI
+import CoinbaseWalletSDK
+
 
 struct ContentView: View {
     var body: some View {
@@ -59,6 +61,10 @@ struct ContentView: View {
             .padding()
             .frame(height: 300)
             ConnectView()
+                .onOpenURL(perform: { url in
+                    print("Reveived ULR \(url.absoluteString)")
+                    _ = try? CoinbaseWalletSDK.shared.handleResponse(url)
+                })
             Spacer(minLength: 0)
         }
         .foregroundColor(.black)

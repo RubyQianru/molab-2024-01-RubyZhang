@@ -16,13 +16,11 @@ struct ConnectView: View {
         VStack {
             Text("Wallet address")
             Text(coinbaseRepo.ethAddress)
-            
             Button {
                 Task {
                     try await coinbaseRepo.connectToCoinbase()
                 }
             } label: {
-                
                 Text("Connect Wallet")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)

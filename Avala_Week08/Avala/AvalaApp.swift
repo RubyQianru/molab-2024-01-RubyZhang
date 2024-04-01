@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoinbaseWalletSDK
 
 @main
 struct AvalaApp: App {
@@ -13,6 +14,7 @@ struct AvalaApp: App {
     var body: some Scene {
         WindowGroup {
             CustomTabView()
+
 
         }
     }
