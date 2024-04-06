@@ -9,29 +9,32 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class FollowersViewModel : ObservableObject {
-    @Published var items = [CoinTwitter]()
+class FollowerViewModel: ObservableObject {
+    @Published var followerCount: Int = 0
     
     private var db = Firestore.firestore()
     
-    func fetchData() {
-        db.collection("MemeCoins").addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
+    func fetchLatestFollowerCount(coinId: String) {
+        let coinRef = db.collection("MemeCoins").document(coinId)
+        coinRef.collection("FollowerCounts")
+            .order(by: "timestamp", descending: true)
+            .limit(to: 1)
+            .getDocuments { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        if let followerCount = document.data()["count"] as? Int {
+                            DispatchQueue.main.async {
+                                self.followerCount = followerCount
+                            }
+                        }
+                    }
+                }
             }
-            
-            
-            
-            self.items = documents.map { queryDocumentSnapshot -> CoinTwitter in
-                let data = queryDocumentSnapshot.data()
-                let id = queryDocumentSnapshot.documentID
-                let followers_count = data["field"] as? Int ?? 0
-                return CoinTwitter(coin: id, followers_count: followers_count)
-            }
-        }
     }
 }
+
 
 
 
