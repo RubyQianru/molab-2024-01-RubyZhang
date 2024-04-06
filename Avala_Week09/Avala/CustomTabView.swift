@@ -16,8 +16,11 @@ struct CustomTabView: View {
                 ContentView()
                     .tag("house")
                 
-                CoinView()
+                FollowersView()
                     .tag("list.bullet")
+                
+                CoinView()
+                    .tag("dollarsign.circle.fill")
                 
 //                RecordingsList()
 //                    .tag("folder")

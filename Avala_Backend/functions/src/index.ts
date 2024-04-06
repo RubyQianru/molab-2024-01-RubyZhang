@@ -8,8 +8,8 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
-exports.scheduledFunction = functions.pubsub.schedule("every 12 hours").timeZone('America/New_York').onRun(async () => {
-  await updateAllFollowerCounts();
+exports.scheduledFunction = functions.pubsub.schedule("every 3 hours").timeZone("America/New_York").onRun(async () => {
+  updateAllFollowerCounts().then(() => console.log("Updated all follower counts")).catch(console.error);
 });
 
 async function updateAllFollowerCounts() {

@@ -6,7 +6,7 @@ const memeCoins = [
   {id: "pepe", twitterHandle: "pepecoineth"},
   {id: "floki", twitterHandle: "realflokiinu"},
   {id: "bonk", twitterHandle: "bonk_inu"},
-  {id: "bome", twitterHandle: "bomebookofmemes"},
+  {id: "bome", twitterHandle: "darkfarms1"},
   {id: "corgiai", twitterHandle: "corgiaiclub"},
   {id: "biden", twitterHandle: "boden4pres"},
   {id: "brett", twitterHandle: "basedbrett"},

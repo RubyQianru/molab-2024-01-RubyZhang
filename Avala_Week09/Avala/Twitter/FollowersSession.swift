@@ -16,39 +16,72 @@ class FollowerViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
-    private var coinNames = [ "dogecoin","shiba", "wif", "pepe", "floki", "bonk", "bome", "corgiai","biden","brett","memecoin", "degen", "mew", "babydoge", "coq" ]
+    private var coinNames : [String: String] = [
+        "DOGE": "dogecoin",
+        "SHIB": "shiba",
+        "WIF" : "wif",
+        "PEPE" : "pepe",
+        "FLOKI" : "floki",
+        "BONK" : "bonk",
+        "BOME" : "bome",
+        "CORGIAI" : "corgiai",
+        "BIDEN" : "biden",
+        "BRETT" : "brett",
+        "MEME" : "memecoin",
+        "DEGEN" : "degen",
+        "BABYDOGE" : "babydoge",
+        "MEW" : "mew",
+        "COQ" : "coq"
+    ]
 
     func fetchAllFolowersCount() {
-        self.coins = self.coinNames.map{ CoinFollower(id: $0) }
-
-        for i in 0..<coins.count {
-            fetchLatestFollowerCount(coinId: coins[i].id)
+        self.coins = self.coinNames.map { key, value in
+            CoinFollower(id: key ,name: value)
         }
+        
+        for i in 0..<coins.count {
+            fetchLatestFollowerCount(coinId: coins[i].name)
+        }
+
     }
     
     func fetchLatestFollowerCount(coinId: String) {
         let coinRef = db.collection("MemeCoins").document(coinId)
         coinRef.collection("FollowerCounts")
             .order(by: "timestamp", descending: true)
-            .limit(to: 1)
+            .limit(to: 2)
             .getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        if let followerCount = document.data()["count"] as? Int {
-                            DispatchQueue.main.async {
-                                self.followerCount = followerCount
-                            }
+                } else if let documents = querySnapshot?.documents, documents.count > 0 {
+                    var counts: [Int] = documents.compactMap { document in
+                        return document.data()["count"] as? Int
+                    }
+
+                    while counts.count < 2 {
+                        counts.append(0)
+                    }
+
+                    DispatchQueue.main.async {
+                        if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
+                            var updatedCoin = self.coins[index]
+                            updatedCoin.followerCount = counts[0]
+                            updatedCoin.lastFollowerCount = counts.count > 1 ? counts[1] : 0 
+                            updatedCoin.diff = updatedCoin.followerCount - updatedCoin.lastFollowerCount
+                            self.coins[index] = updatedCoin
                         }
                     }
+                } else {
+                    print("No documents found for \(coinId) or count field is missing")
                 }
             }
-    }
-}
+    }}
 
 struct CoinFollower {
     var id: String
+    var name: String
     var followerCount: Int = 0
+    var lastFollowerCount: Int = 0
+    var diff: Int = 0
 }
 
