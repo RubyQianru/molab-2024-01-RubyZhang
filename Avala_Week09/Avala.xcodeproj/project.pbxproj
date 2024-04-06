@@ -20,6 +20,7 @@
 		698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */; };
 		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
 		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
+		69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDA4802BC1B4F70085B014 /* FollowersView.swift */; };
 		69FBE2992BC0C66000ABD9DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69FBE2982BC0C66000ABD9DC /* GoogleService-Info.plist */; };
 		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
 		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
@@ -45,6 +46,7 @@
 		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
 		69FBE2972BC0C5AD00ABD9DC /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FBE2982BC0C66000ABD9DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
+				69DDA4802BC1B4F70085B014 /* FollowersView.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
 				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,
 				697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */,
+				69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */,
 				697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

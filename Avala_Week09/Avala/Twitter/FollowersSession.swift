@@ -8,11 +8,23 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import SwiftUI
 
 class FollowerViewModel: ObservableObject {
     @Published var followerCount: Int = 0
+    @Published var coins : [CoinFollower] = []
     
     private var db = Firestore.firestore()
+    
+    private var coinNames = [ "dogecoin","shiba", "wif", "pepe", "floki", "bonk", "bome", "corgiai","biden","brett","memecoin", "degen", "mew", "babydoge", "coq" ]
+
+    func fetchAllFolowersCount() {
+        self.coins = self.coinNames.map{ CoinFollower(id: $0) }
+
+        for i in 0..<coins.count {
+            fetchLatestFollowerCount(coinId: coins[i].id)
+        }
+    }
     
     func fetchLatestFollowerCount(coinId: String) {
         let coinRef = db.collection("MemeCoins").document(coinId)
@@ -35,11 +47,8 @@ class FollowerViewModel: ObservableObject {
     }
 }
 
-
-
-
-
-struct CoinTwitter: Codable, Hashable {
-    var coin: String
-    var followers_count: Int
+struct CoinFollower {
+    var id: String
+    var followerCount: Int = 0
 }
+
