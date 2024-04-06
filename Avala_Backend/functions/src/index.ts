@@ -4,13 +4,12 @@ import {updateFollowersCount} from "./helpers";
 import memeCoins from "./memeCoins";
 
 admin.initializeApp({
-  credential: admin.credential.cert(require('../key/admin.json'))
+  credential: admin.credential.cert(require("../key/admin.json")),
 });
 const db = admin.firestore();
 
 exports.scheduledFunction = functions.pubsub.schedule("every 12 hours").onRun(async () => {
   await updateAllFollowerCounts();
-  console.log("Finished updating all follower counts.");
 });
 
 async function updateAllFollowerCounts() {

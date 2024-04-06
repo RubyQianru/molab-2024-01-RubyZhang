@@ -15,11 +15,13 @@ class FollowersViewModel : ObservableObject {
     private var db = Firestore.firestore()
     
     func fetchData() {
-        db.collection("yourCollectionName").addSnapshotListener { (querySnapshot, error) in
+        db.collection("MemeCoins").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
+            
+            
             
             self.items = documents.map { queryDocumentSnapshot -> CoinTwitter in
                 let data = queryDocumentSnapshot.data()
