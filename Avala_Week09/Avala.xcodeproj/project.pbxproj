@@ -20,7 +20,16 @@
 		698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */; };
 		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
 		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
-		69BCB48F2BBDB46900465AF9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69BCB48E2BBDB46900465AF9 /* FirebaseAnalytics */; };
+		69FBE2992BC0C66000ABD9DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69FBE2982BC0C66000ABD9DC /* GoogleService-Info.plist */; };
+		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
+		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
+		69FBE2A32BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */; };
+		69FBE2A52BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */; };
+		69FBE2A72BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		69FBE2A92BC0CB6E00ABD9DC /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */; };
+		69FBE2AC2BC0CCB500ABD9DC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */; };
+		69FBE2AE2BC0CCCF00ABD9DC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */; };
+		69FBE2B02BC0CCE300ABD9DC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +41,13 @@
 		697BA4662BA2188700FA6726 /* TabButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
 		697BA4672BA2188700FA6726 /* AvalaApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvalaApp.swift; sourceTree = "<group>"; };
 		697BA4682BA2188700FA6726 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		697BA4832BA218F700FA6726 /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinSession.swift; sourceTree = "<group>"; };
 		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
-		69BCB48B2BBDB3AE00465AF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		69BCB48C2BBDB3B400465AF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69FBE2972BC0C5AD00ABD9DC /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69FBE2982BC0C66000ABD9DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +55,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69BCB48F2BBDB46900465AF9 /* FirebaseAnalytics in Frameworks */,
+				69FBE2A52BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift in Frameworks */,
+				69FBE2A72BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */,
+				69FBE2B02BC0CCE300ABD9DC /* FirebaseDatabaseSwift in Frameworks */,
+				69FBE2A32BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				69FBE2A92BC0CB6E00ABD9DC /* FirebaseAppCheck in Frameworks */,
 				698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */,
+				69FBE2AE2BC0CCCF00ABD9DC /* FirebaseDatabase in Frameworks */,
+				69FBE2AC2BC0CCB500ABD9DC /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +73,15 @@
 		697BA4492BA2188700FA6726 /* Avala */ = {
 			isa = PBXGroup;
 			children = (
-				69BCB48C2BBDB3B400465AF9 /* GoogleService-Info.plist */,
 				697BA4572BA2188700FA6726 /* Header.swift */,
 				697BA4662BA2188700FA6726 /* TabButtonView.swift */,
 				697BA4672BA2188700FA6726 /* AvalaApp.swift */,
 				697BA4682BA2188700FA6726 /* ContentView.swift */,
+				69FBE2982BC0C66000ABD9DC /* GoogleService-Info.plist */,
 				697BA4532BA2188700FA6726 /* CustomTabView.swift */,
 				698C41E02BB5CA8800392264 /* dApp */,
 				697BA4512BA2188700FA6726 /* Color */,
+				69EA166F2BC0BC6B00A4621F /* Twitter */,
 				697BA4842BA21D7600FA6726 /* Coins */,
 				697BA4542BA2188700FA6726 /* Assets.xcassets */,
 				697BA4552BA2188700FA6726 /* Preview Content */,
@@ -109,10 +126,25 @@
 		69E3424E2B9FACD500C00DB7 = {
 			isa = PBXGroup;
 			children = (
-				69BCB48B2BBDB3AE00465AF9 /* GoogleService-Info.plist */,
 				697BA4492BA2188700FA6726 /* Avala */,
-				697BA4832BA218F700FA6726 /* Avala.app */,
+				69FBE2972BC0C5AD00ABD9DC /* Avala.app */,
+				69FBE2AA2BC0CCB500ABD9DC /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		69EA166F2BC0BC6B00A4621F /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		69FBE2AA2BC0CCB500ABD9DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,10 +165,17 @@
 			name = Avala;
 			packageProductDependencies = (
 				698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */,
-				69BCB48E2BBDB46900465AF9 /* FirebaseAnalytics */,
+				69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */,
+				69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */,
+				69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */,
+				69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */,
+				69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */,
+				69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */,
+				69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */,
+				69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */,
 			);
 			productName = "Audio-App";
-			productReference = 697BA4832BA218F700FA6726 /* Avala.app */;
+			productReference = 69FBE2972BC0C5AD00ABD9DC /* Avala.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +204,7 @@
 			mainGroup = 69E3424E2B9FACD500C00DB7;
 			packageReferences = (
 				698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */,
-				69BCB48D2BBDB46900465AF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 69E3424E2B9FACD500C00DB7;
 			projectDirPath = "";
@@ -183,6 +222,7 @@
 			files = (
 				697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */,
 				697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */,
+				69FBE2992BC0C66000ABD9DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +238,7 @@
 				697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */,
 				698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */,
 				698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */,
+				69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */,
 				697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */,
 				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
 				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,
@@ -422,7 +463,7 @@
 				version = 1.0.5;
 			};
 		};
-		69BCB48D2BBDB46900465AF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -438,10 +479,45 @@
 			package = 698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */;
 			productName = CoinbaseWalletSDK;
 		};
-		69BCB48E2BBDB46900465AF9 /* FirebaseAnalytics */ = {
+		69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 69BCB48D2BBDB46900465AF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

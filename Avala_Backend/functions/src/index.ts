@@ -1,30 +1,12 @@
-// import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
 import * as functions from "firebase-functions";
 import {updateFollowersCount} from "./helpers";
+import memeCoins from "./memeCoins";
 
 admin.initializeApp({
   credential: admin.credential.cert(require('../key/admin.json'))
 });
 const db = admin.firestore();
-
-const memeCoins = [
-  {id: "dogecoin", twitterHandle: "dogecoin"},
-  {id: "shiba", twitterHandle: "shibtoken"},
-  {id: "wif", twitterHandle: "dogwifcoin"},
-  {id: "pepe", twitterHandle: "pepecoineth"},
-  {id: "floki", twitterHandle: "realflokiinu"},
-  {id: "bonk", twitterHandle: "bonk_inu"},
-  {id: "bome", twitterHandle: "bomebookofmemes"},
-  {id: "corgiai", twitterHandle: "corgiaiclub"},
-  {id: "biden", twitterHandle: "boden4pres"},
-  {id: "brett", twitterHandle: "basedbrett"},
-  {id: "memecoin", twitterHandle: "memecoin"},
-  {id: "degen", twitterHandle: "degenstogether"},
-  {id: "mew", twitterHandle: "mewsworld"},
-  {id: "babydoge", twitterHandle: "babydogecoin"},
-  {id: "coq", twitterHandle: "coqinuavax"},
-];
 
 exports.scheduledFunction = functions.pubsub.schedule("every 12 hours").onRun(async () => {
   await updateAllFollowerCounts();
@@ -51,7 +33,4 @@ async function updateAllFollowerCounts() {
 
   console.log("Batch commit successful");
 }
-
-
-updateAllFollowerCounts().then(() => console.log("Updated all follower counts")).catch(console.error);
 
