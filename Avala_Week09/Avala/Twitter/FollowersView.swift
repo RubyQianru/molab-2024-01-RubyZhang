@@ -25,7 +25,7 @@ struct FollowersView: View {
                         .resizable()
                         .frame(width: 35, height: 35)
                     Text(coin.name.capitalized)
-                        .font(.system(size: 20))
+                        
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     Spacer()
                     
@@ -42,7 +42,7 @@ struct FollowersView: View {
                             Text("\(coin.diff)")
                                 .foregroundColor(.green)
                         }
-                        .frame(width: 50)
+                        .frame(width: 80)
                     } else if coin.diff < 0 {
                         HStack (spacing:0){
                             Spacer()
@@ -53,7 +53,7 @@ struct FollowersView: View {
                             Text("\(coin.diff)")
                                 .foregroundColor(.red)
                         }
-                        .frame(width: 50)
+                        .frame(width: 80)
                         
                     } else {
                         HStack(spacing:0){
@@ -63,7 +63,7 @@ struct FollowersView: View {
                                 .frame(width: 10, height: 10)
                             Text("\(coin.diff)")
                         }
-                        .frame(width: 50)
+                        .frame(width: 80)
                         
                     }
                 }
