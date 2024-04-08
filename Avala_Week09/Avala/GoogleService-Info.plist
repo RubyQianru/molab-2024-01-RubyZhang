@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBXCBl9ITJ86EwkVBGcsI9Z1HmTIiWRSSc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>876968709780</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Ruby.AvalaDapp</string>
+	<key>PROJECT_ID</key>
+	<string>avala-56fbc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>avala-56fbc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:876968709780:ios:90d756f06a58b564dcee81</string>
+	<key>DATABASE_URL</key>
+	<string>https://avala-56fbc-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
