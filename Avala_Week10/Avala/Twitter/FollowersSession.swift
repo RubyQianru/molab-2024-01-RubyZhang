@@ -49,7 +49,7 @@ class FollowerViewModel: ObservableObject {
         let coinRef = db.collection("MemeCoins").document(coinId)
         coinRef.collection("FollowerCounts")
             .order(by: "timestamp", descending: true)
-            .limit(to: 2)
+            .limit(to: 14)
             .getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -58,16 +58,19 @@ class FollowerViewModel: ObservableObject {
                         return document.data()["count"] as? Int
                     }
 
-                    while counts.count < 2 {
+                    while counts.count < 14 {
                         counts.append(0)
                     }
 
                     DispatchQueue.main.async {
                         if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
                             var updatedCoin = self.coins[index]
+                            updatedCoin.counts = counts
                             updatedCoin.followerCount = counts[0]
-                            updatedCoin.lastFollowerCount = counts.count > 1 ? counts[1] : 0 
-                            updatedCoin.diff = updatedCoin.followerCount - updatedCoin.lastFollowerCount
+                            var lastFollowerCount = counts.count > 1 ? counts[1] : 0
+                            updatedCoin.diff = updatedCoin.followerCount - lastFollowerCount
+                            
+                            print(updatedCoin.counts)
                             self.coins[index] = updatedCoin
                         }
                     }
@@ -81,7 +84,7 @@ struct CoinFollower {
     var id: String
     var name: String
     var followerCount: Int = 0
-    var lastFollowerCount: Int = 0
+    var counts : [Int] = []
     var diff: Int = 0
 }
 
