@@ -8,4 +8,23 @@
 import Foundation
 import SwiftUI
 
+struct CoinDashboardView: View {
+    var coin: CoinFollower
 
+    var body: some View {
+        CoinHeaderView(coin:coin)
+        CoinDetailView(coin:coin)
+        LineGraphView(data:coin.counts)
+        Spacer()
+    }
+}
+
+struct CoinDetailView: View {
+    let coin: CoinFollower
+
+    var body: some View {
+        VStack {
+            Text(coin.name)
+        }
+    }
+}

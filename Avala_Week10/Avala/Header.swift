@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HeaderView: View {
     var title: String
-    var subtitle: String
     
     var body: some View {
         VStack(alignment: .leading){
@@ -29,7 +28,6 @@ struct HeaderView: View {
                 .font(Font.body.weight(.bold))
                 .foregroundColor(Color.purpleColor)
             }
-            Text(subtitle)
         }
         .padding()
         

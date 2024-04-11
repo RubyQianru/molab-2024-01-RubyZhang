@@ -33,7 +33,7 @@ class FollowerViewModel: ObservableObject {
         "MEW" : "mew",
         "COQ" : "coq"
     ]
-
+    
     func fetchAllFolowersCount() {
         self.coins = self.coinNames.map { key, value in
             CoinFollower(id: key ,name: value)
@@ -42,7 +42,7 @@ class FollowerViewModel: ObservableObject {
         for i in 0..<coins.count {
             fetchLatestFollowerCount(coinId: coins[i].name)
         }
-
+        
     }
     
     func fetchLatestFollowerCount(coinId: String) {
@@ -54,23 +54,25 @@ class FollowerViewModel: ObservableObject {
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else if let documents = querySnapshot?.documents, documents.count > 0 {
-                    var counts: [Int] = documents.compactMap { document in
-                        return document.data()["count"] as? Int
+                    var counts: [Int] = []
+                    var countsDict: [Int: Int] = [:]
+                    
+                    for document in documents {
+                        if let count = document.data()["count"] as? Int,
+                           let timestamp = (document.data()["timestamp"] as? Timestamp)?.seconds {
+                            countsDict[Int(timestamp)] = count
+                            counts.append(count)
+                        }
                     }
-
-                    while counts.count < 14 {
-                        counts.append(0)
-                    }
-
+                    
                     DispatchQueue.main.async {
                         if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
                             var updatedCoin = self.coins[index]
-                            updatedCoin.counts = counts
+                            updatedCoin.counts = countsDict
+                            print(countsDict)
                             updatedCoin.followerCount = counts[0]
-                            var lastFollowerCount = counts.count > 1 ? counts[1] : 0
+                            let lastFollowerCount = counts.count > 1 ? counts[1] : 0
                             updatedCoin.diff = updatedCoin.followerCount - lastFollowerCount
-                            
-                            print(updatedCoin.counts)
                             self.coins[index] = updatedCoin
                         }
                     }
@@ -80,11 +82,11 @@ class FollowerViewModel: ObservableObject {
             }
     }}
 
-struct CoinFollower {
+struct CoinFollower : Identifiable {
     var id: String
     var name: String
     var followerCount: Int = 0
-    var counts : [Int] = []
+    var counts : [Int:Int] = [:]
     var diff: Int = 0
 }
 

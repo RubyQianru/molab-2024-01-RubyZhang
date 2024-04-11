@@ -15,7 +15,7 @@ struct CoinView: View {
     
     var body: some View {
         VStack{
-            HeaderView(title: "Total Market Cap", subtitle: "")
+            HeaderView(title: "Total Market Cap")
             
             ScrollView(.horizontal, showsIndicators: false) {
                 Spacer()

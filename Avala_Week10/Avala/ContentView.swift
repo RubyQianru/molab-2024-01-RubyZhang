@@ -13,7 +13,7 @@ import CoinbaseWalletSDK
 struct ContentView: View {
     var body: some View {
         VStack() {
-            HeaderView(title: "Avala", subtitle: "Earn your points today")
+            HeaderView(title: "Avala")
             
             ScrollView (.horizontal, showsIndicators: false) {
                 LazyHStack {

@@ -17,24 +17,26 @@ struct FollowersView: View {
     
     var body: some View {
         VStack{
-            HeaderView(title: "Twitter Followers", subtitle: "")
-            List(sortedCoins, id: \.id) { coin in
-                HStack {
-                    Image(coin.id)
-                        .resizable()
-                        .frame(width: 35, height: 35)
-                    Text(coin.name.capitalized)
-                        
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                    Text("\(coin.followerCount)")
-                    FollowerChangeView(diff: coin.diff)
+            NavigationView {
+                List(sortedCoins, id: \.id) { coin in
+                    NavigationLink(destination: CoinDashboardView(coin: coin)) {
+                        HStack {
+                            Image(coin.id)
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                            Text(coin.name.capitalized)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            Spacer()
+                            Text("\(coin.followerCount)")
+                            FollowerChangeView(diff: coin.diff)
+                            
+                        }
+                        .padding(.vertical, 5)
+                    }
                 }
-                .padding(.vertical, 5)
-            }
-            
-            .onAppear {
-                followersviewModel.fetchAllFolowersCount()
+                .onAppear {
+                    followersviewModel.fetchAllFolowersCount()
+                }
             }
         }
     }
