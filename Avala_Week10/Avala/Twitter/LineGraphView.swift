@@ -11,25 +11,16 @@ import Charts
 
 struct LineGraphView: View {
     let counts: [Int: Int]
+    let maxi: Int
+    let mini: Int
     
     var dataPoints: [FollowerDataPoint] {
         counts.map { FollowerDataPoint(timestamp: $0.key, followerCount: $0.value) }
             .sorted { $0.timestamp < $1.timestamp }
     }
     
-    var minPoint: Int {
-        dataPoints.first?.followerCount ?? 0
-    }
-    
-    var maxPoint: Int {
-        dataPoints.last?.followerCount ?? 0
-    }
-    
     
     var body: some View {
-        let dynamicPadding = max(2000, (maxPoint - minPoint) * Int(0.1)) // 10% of the range or 2000, whichever is greater
-        let adjustedMinPoint = max(0, minPoint - dynamicPadding)
-        let adjustedMaxPoint = maxPoint + dynamicPadding
         
         Chart(dataPoints, id: \.timestamp) { dataPoint in
             LineMark(
@@ -41,7 +32,8 @@ struct LineGraphView: View {
         .chartXAxis {
             AxisMarks(values: .stride(by: .day))
         }
-        .chartYScale(domain: adjustedMaxPoint  - 5000 ... adjustedMaxPoint)
+        .chartYScale(domain: mini - 500 ... maxi + 500)
+        
     }
 }
 

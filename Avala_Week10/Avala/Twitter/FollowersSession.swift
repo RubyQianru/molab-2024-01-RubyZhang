@@ -56,20 +56,27 @@ class FollowerViewModel: ObservableObject {
                 } else if let documents = querySnapshot?.documents, documents.count > 0 {
                     var counts: [Int] = []
                     var countsDict: [Int: Int] = [:]
-                    
+                    var maxi = 0
+                    var mini = 39101140
                     for document in documents {
                         if let count = document.data()["count"] as? Int,
                            let timestamp = (document.data()["timestamp"] as? Timestamp)?.seconds {
                             countsDict[Int(timestamp)] = count
                             counts.append(count)
+                            if count > maxi {maxi = count}
+                            if count < mini {mini = count}
                         }
                     }
                     
                     DispatchQueue.main.async {
                         if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
                             var updatedCoin = self.coins[index]
+                            
                             updatedCoin.counts = countsDict
                             updatedCoin.followerCount = counts[0]
+                            updatedCoin.maxCount = maxi
+                            updatedCoin.minCount = mini
+                            
                             let lastFollowerCount = counts.count > 1 ? counts[1] : 0
                             updatedCoin.diff = updatedCoin.followerCount - lastFollowerCount
                             self.coins[index] = updatedCoin
@@ -87,5 +94,7 @@ struct CoinFollower : Identifiable {
     var followerCount: Int = 0
     var counts : [Int:Int] = [:]
     var diff: Int = 0
+    var maxCount: Int = 0
+    var minCount: Int = 0
 }
 

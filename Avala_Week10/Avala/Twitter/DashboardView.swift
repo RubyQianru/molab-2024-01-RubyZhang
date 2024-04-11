@@ -14,7 +14,8 @@ struct CoinDashboardView: View {
     var body: some View {
         CoinHeaderView(coin:coin)
         CoinDetailView(coin:coin)
-        LineGraphView(counts:coin.counts)
+        LineGraphView(counts:coin.counts, maxi: coin.maxCount, mini: coin.minCount)
+            .frame(height: 300)
         Spacer()
     }
 }
@@ -24,7 +25,6 @@ struct CoinDetailView: View {
 
     var body: some View {
         VStack {
-            Text(coin.name)
         }
     }
 }
