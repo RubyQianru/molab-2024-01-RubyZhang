@@ -56,7 +56,7 @@
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
-		69FBE2972BC0C5AD00ABD9DC /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69FBE2972BC0C5AD00ABD9DC /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Avala.app; path = "/Users/qianruzhang/Documents/GitHub/molab-2024-01-RubyZhang/Avala_Week10/build/Debug-iphoneos/Avala.app"; sourceTree = "<absolute>"; };
 		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				697BA4492BA2188700FA6726 /* Avala */,
-				69FBE2972BC0C5AD00ABD9DC /* Avala.app */,
 				69FBE2AA2BC0CCB500ABD9DC /* Frameworks */,
 			);
 			sourceTree = "<group>";

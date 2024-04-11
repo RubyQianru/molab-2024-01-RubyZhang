@@ -14,7 +14,7 @@ struct CoinDashboardView: View {
     var body: some View {
         CoinHeaderView(coin:coin)
         CoinDetailView(coin:coin)
-        LineGraphView(data:coin.counts)
+        LineGraphView(counts:coin.counts)
         Spacer()
     }
 }

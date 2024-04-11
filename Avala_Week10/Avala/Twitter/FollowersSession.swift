@@ -69,7 +69,6 @@ class FollowerViewModel: ObservableObject {
                         if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
                             var updatedCoin = self.coins[index]
                             updatedCoin.counts = countsDict
-                            print(countsDict)
                             updatedCoin.followerCount = counts[0]
                             let lastFollowerCount = counts.count > 1 ? counts[1] : 0
                             updatedCoin.diff = updatedCoin.followerCount - lastFollowerCount
