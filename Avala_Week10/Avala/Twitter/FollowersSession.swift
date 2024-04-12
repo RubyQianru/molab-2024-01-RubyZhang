@@ -16,31 +16,29 @@ class FollowerViewModel: ObservableObject {
     
     private var db = Firestore.firestore()
     
-    private var coinNames : [String: String] = [
-        "DOGE": "dogecoin",
-        "SHIB": "shiba",
-        "WIF" : "wif",
-        "PEPE" : "pepe",
-        "FLOKI" : "floki",
-        "BONK" : "bonk",
-        "BOME" : "bome",
-        "CORGIAI" : "corgiai",
-        "BIDEN" : "biden",
-        "BRETT" : "brett",
-        "MEME" : "memecoin",
-        "DEGEN" : "degen",
-        "BABYDOGE" : "babydoge",
-        "MEW" : "mew",
-        "COQ" : "coq"
+    private var coinNames : [(String, String)] = [
+        ("DOGE", "dogecoin"),
+        ("SHIB", "shiba"),
+        ("WIF", "wif"),
+        ("PEPE", "pepe"),
+        ("FLOKI", "floki"),
+        ("BONK", "bonk"),
+        ("BOME", "bome"),
+        ("CORGIAI", "corgiai"),
+        ("BIDEN", "biden"),
+        ("BRETT", "brett"),
+        ("MEME", "memecoin"),
+        ("DEGEN", "degen"),
+        ("BABYDOGE", "babydoge"),
+        ("MEW", "mew"),
+        ("COQ", "coq")
     ]
     
     func fetchAllFolowersCount() {
-        self.coins = self.coinNames.map { key, value in
-            CoinFollower(id: key ,name: value)
-        }
+        self.coins = self.coinNames.map { CoinFollower(id: $0.0, name: $0.1) }
         
-        for i in 0..<coins.count {
-            fetchLatestFollowerCount(coinId: coins[i].name)
+        for coin in coins {
+            fetchLatestFollowerCount(coinId: coin.name)
         }
         
     }
@@ -82,6 +80,7 @@ class FollowerViewModel: ObservableObject {
                             self.coins[index] = updatedCoin
                         }
                     }
+                    
                 } else {
                     print("No documents found for \(coinId) or count field is missing")
                 }

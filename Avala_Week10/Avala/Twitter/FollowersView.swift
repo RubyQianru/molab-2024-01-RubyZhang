@@ -11,14 +11,9 @@ import SwiftUI
 struct FollowersView: View {
     @StateObject var followersviewModel = FollowerViewModel()
     
-    var sortedCoins: [CoinFollower] {
-        followersviewModel.coins.sorted { $0.followerCount > $1.followerCount }
-    }
-    
     var body: some View {
-        
         NavigationView {
-            List(sortedCoins, id: \.id) { coin in
+            List(followersviewModel.coins, id: \.id) { coin in
                 NavigationLink(destination: CoinDashboardView(coin: coin)) {
                     HStack {
                         Image(coin.id)

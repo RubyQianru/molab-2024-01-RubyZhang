@@ -32,6 +32,7 @@ struct LineGraphView: View {
         .chartXAxis {
             AxisMarks(values: .stride(by: .day))
         }
+        .chartYAxis(.hidden)
         .chartYScale(domain: mini - 500 ... maxi + 500)
         
     }
