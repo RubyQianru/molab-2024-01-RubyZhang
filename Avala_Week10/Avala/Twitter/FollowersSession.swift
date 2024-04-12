@@ -69,7 +69,6 @@ class FollowerViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         if let index = self.coins.firstIndex(where: { $0.name == coinId }) {
                             var updatedCoin = self.coins[index]
-                            
                             updatedCoin.counts = countsDict
                             updatedCoin.followerCount = counts[0]
                             updatedCoin.maxCount = maxi

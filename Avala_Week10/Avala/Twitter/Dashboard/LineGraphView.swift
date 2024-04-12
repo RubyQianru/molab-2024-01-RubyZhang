@@ -14,6 +14,8 @@ struct LineGraphView: View {
     let maxi: Int
     let mini: Int
     
+    @State private var selectedTimestamp: Int?
+    
     var dataPoints: [FollowerDataPoint] {
         counts.map { FollowerDataPoint(timestamp: $0.key, followerCount: $0.value) }
             .sorted { $0.timestamp < $1.timestamp }
@@ -28,6 +30,19 @@ struct LineGraphView: View {
                 y: .value("Follower Count", dataPoint.followerCount)
             )
             .interpolationMethod(.catmullRom)
+            
+            PointMark(
+                x: .value("Date", Date(timeIntervalSince1970: Double(dataPoint.timestamp))),
+                y: .value("Follower Count", dataPoint.followerCount)
+            )
+            .symbol(Circle())
+            .foregroundStyle(selectedTimestamp == dataPoint.timestamp ? Color.greenColor : Color.blueColor)
+            .annotation(position: .top, alignment: .center) {
+                if selectedTimestamp == dataPoint.timestamp {
+                    Text("\(dataPoint.followerCount)")
+                        .font(.caption)
+                }
+            }
         }
         .chartXAxis {
             AxisMarks(values: .stride(by: .day))
@@ -35,15 +50,23 @@ struct LineGraphView: View {
         .chartYAxis(.hidden)
         .chartYScale(domain: mini - 500 ... maxi + 500)
         .foregroundStyle(Color.blueColor)
-
         
+        Picker("Select Date", selection: $selectedTimestamp) {
+            ForEach(dataPoints, id: \.timestamp) { dataPoint in
+                Text(Date(timeIntervalSince1970: Double(dataPoint.timestamp)), style: .date)
+                    .tag(dataPoint.timestamp as Int?)
+            }
+        }
+        .pickerStyle(.wheel)
     }
 }
 
 
-struct FollowerDataPoint {
+struct FollowerDataPoint : Identifiable{
     let timestamp: Int
     let followerCount: Int
+    var id: Int { timestamp }
+    
 }
 
 

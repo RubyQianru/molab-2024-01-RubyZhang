@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				69648AA32BC85CDF005C535E /* DashboardView.swift */,
-				69648AA92BC86595005C535E /* CoinHeaderView.swift */,
 				69648AAB2BC86885005C535E /* LineGraphView.swift */,
+				69648AA92BC86595005C535E /* CoinHeaderView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
