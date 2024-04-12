@@ -34,6 +34,8 @@ struct LineGraphView: View {
         }
         .chartYAxis(.hidden)
         .chartYScale(domain: mini - 500 ... maxi + 500)
+        .foregroundStyle(Color.blueColor)
+
         
     }
 }

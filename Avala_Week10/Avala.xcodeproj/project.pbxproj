@@ -84,6 +84,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69648AB22BC9C6D8005C535E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				69648AA32BC85CDF005C535E /* DashboardView.swift */,
+				69648AA92BC86595005C535E /* CoinHeaderView.swift */,
+				69648AAB2BC86885005C535E /* LineGraphView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		69648AB52BC9C708005C535E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				69648AA52BC85EDD005C535E /* FollowersChangeView.swift */,
+				69648AB02BC9C586005C535E /* ListSort.swift */,
+				69DDA4802BC1B4F70085B014 /* FollowersView.swift */,
+				69648AAE2BC8A512005C535E /* FollowerNumber.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		697BA4492BA2188700FA6726 /* Avala */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
-				69DDA4802BC1B4F70085B014 /* FollowersView.swift */,
-				69648AB02BC9C586005C535E /* ListSort.swift */,
-				69648AAE2BC8A512005C535E /* FollowerNumber.swift */,
-				69648AA52BC85EDD005C535E /* FollowersChangeView.swift */,
-				69648AA32BC85CDF005C535E /* DashboardView.swift */,
-				69648AAB2BC86885005C535E /* LineGraphView.swift */,
-				69648AA92BC86595005C535E /* CoinHeaderView.swift */,
+				69648AB52BC9C708005C535E /* List */,
+				69648AB22BC9C6D8005C535E /* Dashboard */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";

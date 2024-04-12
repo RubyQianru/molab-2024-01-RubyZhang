@@ -30,6 +30,39 @@ struct FollowersView: View {
                     .padding(.vertical, 5)
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        print("Button tapped!")
+                    }) {
+                        Image(systemName: "arrow.down")
+                            .resizable()
+                            .frame(width: 10, height: 10)
+                        Text("Name")
+
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        print("Button tapped!")
+                    }) {
+                        Image(systemName: "arrow.down")
+                            .resizable()
+                            .frame(width: 10, height: 10)
+                        Text("Total")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        print("Button tapped!")
+                    }) {
+                        Image(systemName: "arrow.down")
+                            .resizable()
+                            .frame(width: 10, height: 10)
+                        Text("12H")
+                    }
+                }
+            }
             .onAppear {
                 followersviewModel.fetchAllFolowersCount()
             }
