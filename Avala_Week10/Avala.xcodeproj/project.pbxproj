@@ -12,6 +12,7 @@
 		69648AA62BC85EDD005C535E /* FollowersChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AA52BC85EDD005C535E /* FollowersChangeView.swift */; };
 		69648AAA2BC86595005C535E /* CoinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AA92BC86595005C535E /* CoinHeaderView.swift */; };
 		69648AAC2BC86885005C535E /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AAB2BC86885005C535E /* LineGraphView.swift */; };
+		69648AAF2BC8A512005C535E /* FollowerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AAE2BC8A512005C535E /* FollowerNumber.swift */; };
 		697BA46F2BA2188700FA6726 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4522BA2188700FA6726 /* Color.swift */; };
 		697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4532BA2188700FA6726 /* CustomTabView.swift */; };
 		697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4542BA2188700FA6726 /* Assets.xcassets */; };
@@ -43,6 +44,8 @@
 		69648AA52BC85EDD005C535E /* FollowersChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersChangeView.swift; sourceTree = "<group>"; };
 		69648AA92BC86595005C535E /* CoinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHeaderView.swift; sourceTree = "<group>"; };
 		69648AAB2BC86885005C535E /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		69648AAD2BC8A4AB005C535E /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69648AAE2BC8A512005C535E /* FollowerNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerNumber.swift; sourceTree = "<group>"; };
 		697BA4522BA2188700FA6726 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		697BA4532BA2188700FA6726 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		697BA4542BA2188700FA6726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +59,6 @@
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
-		69FBE2972BC0C5AD00ABD9DC /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Avala.app; path = "/Users/qianruzhang/Documents/GitHub/molab-2024-01-RubyZhang/Avala_Week10/build/Debug-iphoneos/Avala.app"; sourceTree = "<absolute>"; };
 		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			children = (
 				697BA4492BA2188700FA6726 /* Avala */,
 				69FBE2AA2BC0CCB500ABD9DC /* Frameworks */,
+				69648AAD2BC8A4AB005C535E /* Avala.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +149,7 @@
 			children = (
 				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
 				69DDA4802BC1B4F70085B014 /* FollowersView.swift */,
+				69648AAE2BC8A512005C535E /* FollowerNumber.swift */,
 				69648AA52BC85EDD005C535E /* FollowersChangeView.swift */,
 				69648AA32BC85CDF005C535E /* DashboardView.swift */,
 				69648AAB2BC86885005C535E /* LineGraphView.swift */,
@@ -189,7 +193,7 @@
 				69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */,
 			);
 			productName = "Audio-App";
-			productReference = 69FBE2972BC0C5AD00ABD9DC /* Avala.app */;
+			productReference = 69648AAD2BC8A4AB005C535E /* Avala.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -255,6 +259,7 @@
 				698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */,
 				698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */,
 				69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */,
+				69648AAF2BC8A512005C535E /* FollowerNumber.swift in Sources */,
 				697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */,
 				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
 				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,

@@ -14,7 +14,7 @@ struct FollowerChangeView: View {
                 neutralChange
             }
         }
-        .frame(width: 80)
+        .frame(width: 100)
     }
 
     private var positiveChange: some View {
@@ -22,7 +22,8 @@ struct FollowerChangeView: View {
             Spacer()
             Image(systemName: "arrowtriangle.up.fill")
                 .foregroundColor(.green)
-            Text("\(diff)")
+                .frame(width: 10, height: 10)
+            FollowerNumberView(number: diff)
                 .foregroundColor(.green)
         }
     }
@@ -32,7 +33,8 @@ struct FollowerChangeView: View {
             Spacer()
             Image(systemName: "arrowtriangle.down.fill")
                 .foregroundColor(.red)
-            Text("\(diff)")
+                .frame(width: 10, height: 10)
+            FollowerNumberView(number: diff)
                 .foregroundColor(.red)
         }
     }
@@ -41,7 +43,8 @@ struct FollowerChangeView: View {
         HStack {
             Spacer()
             Image(systemName: "equal")
-            Text("\(diff)")
+                .frame(width: 10, height: 10)
+            FollowerNumberView(number: diff)
         }
     }
 }

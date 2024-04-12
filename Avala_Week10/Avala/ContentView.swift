@@ -34,7 +34,6 @@ struct ContentView: View {
                                             Spacer()
                                         }
                                     }
-                                    .foregroundColor(Color(.black))
                                     .background(Color.greenColor)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     
@@ -67,7 +66,6 @@ struct ContentView: View {
                 })
             Spacer(minLength: 0)
         }
-        .foregroundColor(.black)
     }
 }
 

@@ -22,29 +22,15 @@ struct CustomTabView: View {
                 CoinView()
                     .tag("dollarsign.circle.fill")
                 
-//                RecordingsList()
-//                    .tag("folder")
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            //confirm ignoresSafeArea
+            
             .ignoresSafeArea(.all, edges: .bottom)
             
             HStack {
                 ForEach(tabs, id:\.self){image in
-                    if image == "plus" {
-                        ZStack{
-                            Circle()
-                                .foregroundColor(Color.greenColor)
-                                .frame(width: 80)
-                            TabButtonView(image: image, selectedTab: $selectedTab)
-                                .scaleEffect(2)
-                                .colorMultiply(.black)
-                            
-                        }
-                    } else {
-                        TabButtonView(image: image, selectedTab: $selectedTab)
-                            .scaleEffect(1.2)
-                    }
+                    
+                    TabButtonView(image: image, selectedTab: $selectedTab)
+                        .scaleEffect(1.2)
                     
                     if image != tabs.last{
                         Spacer(minLength: 0)
@@ -54,7 +40,7 @@ struct CustomTabView: View {
             }
             .padding(.horizontal, 10)
             .background(Color(.black))
-          
+            
         }
         .ignoresSafeArea(edges: .bottom)
     }
