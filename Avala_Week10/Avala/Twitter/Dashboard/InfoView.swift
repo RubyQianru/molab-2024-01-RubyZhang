@@ -12,22 +12,18 @@ struct InfoView: View {
     let coin : CoinFollower
     var body: some View {
         VStack(alignment: .leading) {
-            
             Text("Info")
                 .font(.title2)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            Rectangle()
-                .frame(height: 0.1)
-                .foregroundColor(.gray)
-                .padding(.vertical, 1)
-            
+            Divider()
+            InfoViewModel(title: "Twitter", name: coin.name)
         }
     }
 }
 
 struct InfoViewModel : View {
     let title : String
-    let data : Int
+    let name : String
     
     var body: some View {
         VStack{
@@ -37,29 +33,37 @@ struct InfoViewModel : View {
                     .padding(.vertical, 10)
                     .foregroundColor(.gray)
                 Spacer()
-                Text("\(data)")
+                LinkTagModel(name: name)
             }
             .padding(.vertical, 1)
-            Rectangle()
-                .frame(height: 0.1)
-                .foregroundColor(.gray)
-                .padding(.vertical, 1)
+            Divider()
         }
-        
     }
 }
 
 struct LinkTagModel : View {
     let name : String
     var body: some View {
+        
         let urlString = "https://www.coingecko.com/en/coins/\(name.lowercased())"
-
-        let url = URL(string: urlString) {
+        let url = URL(string: urlString)
+        
+        
+        if let url = url {
             Link(destination: url) {
                 Text("Twitter")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.gray)
+                    )
             }
+        } else {
+            EmptyView()
         }
+        
+        
         
     }
 }
