@@ -37,12 +37,12 @@ struct LineGraphView: View {
             )
             .symbol(Circle())
             .foregroundStyle(selectedTimestamp == dataPoint.timestamp ? Color.greenColor : Color.blueColor)
-            .annotation(position: .top, alignment: .center) {
-                if selectedTimestamp == dataPoint.timestamp {
-                    Text("\(dataPoint.followerCount)")
-                        .font(.caption)
-                }
-            }
+//            .annotation(position: .top, alignment: .center) {
+//                if selectedTimestamp == dataPoint.timestamp {
+//                    Text("\(dataPoint.followerCount)")
+//                        .font(.caption)
+//                }
+//            }
         }
         .chartXAxis {
             AxisMarks(values: .stride(by: .day))
@@ -50,14 +50,7 @@ struct LineGraphView: View {
         .chartYAxis(.hidden)
         .chartYScale(domain: mini - 500 ... maxi + 500)
         .foregroundStyle(Color.blueColor)
-        
-        Picker("Select Date", selection: $selectedTimestamp) {
-            ForEach(dataPoints, id: \.timestamp) { dataPoint in
-                Text(Date(timeIntervalSince1970: Double(dataPoint.timestamp)), style: .date)
-                    .tag(dataPoint.timestamp as Int?)
-            }
-        }
-        .pickerStyle(.wheel)
+
     }
 }
 

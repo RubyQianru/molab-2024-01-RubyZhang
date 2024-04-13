@@ -71,9 +71,9 @@ class FollowerViewModel: ObservableObject {
                             var updatedCoin = self.coins[index]
                             updatedCoin.counts = countsDict
                             updatedCoin.followerCount = counts[0]
+                            updatedCoin.firstFollowerCount = counts[13]
                             updatedCoin.maxCount = maxi
                             updatedCoin.minCount = mini
-                            
                             let lastFollowerCount = counts.count > 1 ? counts[1] : 0
                             updatedCoin.diff = updatedCoin.followerCount - lastFollowerCount
                             self.coins[index] = updatedCoin
@@ -90,6 +90,7 @@ struct CoinFollower : Identifiable {
     var id: String
     var name: String
     var followerCount: Int = 0
+    var firstFollowerCount: Int = 0
     var counts : [Int:Int] = [:]
     var diff: Int = 0
     var maxCount: Int = 0
