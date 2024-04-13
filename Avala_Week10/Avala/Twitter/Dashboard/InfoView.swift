@@ -48,16 +48,16 @@ struct LinkTagModel : View {
         let urlString = "https://www.coingecko.com/en/coins/\(name.lowercased())"
         let url = URL(string: urlString)
         
-        
         if let url = url {
             Link(destination: url) {
                 Text("Twitter")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .padding()
+                    .padding(5)
                     .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.gray)
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color.greenColor)
                     )
+                    .foregroundColor(.black)
             }
         } else {
             EmptyView()
