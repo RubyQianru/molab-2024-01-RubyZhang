@@ -24,14 +24,11 @@ struct StatisticView : View {
             Text("\(coin.name.capitalized) Statistics")
                 .font(.title2)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            Rectangle()
-                .frame(height: 0.1)
-                .foregroundColor(.gray)
-                .padding(.vertical, 1)
+            Divider()
             
             StatisticViewModel(title: "Twitter Follower", data: totalFollower)
-            StatisticViewModel(title: "12-Hour Increase", data: halfdaydiff)
-            StatisticViewModel(title: "1-Week Increase ", data: weekdiff)
+            StatisticDiffViewModel(title: "12-Hour Increase", data: halfdaydiff)
+            StatisticDiffViewModel(title: "1-Week Increase ", data: weekdiff)
             StatisticViewModel(title: "Max Followers", data: maxCount)
             StatisticViewModel(title: "Min Followers", data: minCount)
         }
@@ -53,10 +50,29 @@ struct StatisticViewModel : View {
                 Text("\(data)")
             }
             .padding(.vertical, 1)
-            Rectangle()
-                .frame(height: 0.1)
-                .foregroundColor(.gray)
-                .padding(.vertical, 1)
+            Divider()
+        }
+        
+    }
+}
+
+struct StatisticDiffViewModel : View {
+    let title : String
+    let data : Int
+    
+    var body: some View {
+        VStack{
+            HStack{
+                Text(title)
+                    .fontWeight(.light)
+                    .padding(.vertical, 10)
+                    .foregroundColor(.gray)
+                Spacer()
+                FollowerChangeView(diff: data)
+            }
+            .padding(.vertical, 1)
+            Divider()
+
         }
         
     }

@@ -11,6 +11,7 @@ import SwiftUI
 struct CoinHeaderView : View {
     let coin: CoinFollower
     var body: some View {
+        
         HStack {
             HStack{
                 Image(coin.id)

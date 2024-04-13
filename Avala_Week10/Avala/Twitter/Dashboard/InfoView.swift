@@ -48,3 +48,18 @@ struct InfoViewModel : View {
         
     }
 }
+
+struct LinkTagModel : View {
+    let name : String
+    var body: some View {
+        let urlString = "https://www.coingecko.com/en/coins/\(name.lowercased())"
+
+        let url = URL(string: urlString) {
+            Link(destination: url) {
+                Text("Twitter")
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }
+        }
+        
+    }
+}
