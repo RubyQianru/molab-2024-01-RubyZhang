@@ -30,6 +30,7 @@
 		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
 		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
 		69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B432BD7020900C6ABA6 /* PriceNumber.swift */; };
+		69B81B492BD707D500C6ABA6 /* FollowersRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */; };
 		69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDA4802BC1B4F70085B014 /* FollowersView.swift */; };
 		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
 		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
@@ -66,6 +67,7 @@
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		69B81B432BD7020900C6ABA6 /* PriceNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceNumber.swift; sourceTree = "<group>"; };
+		69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersRankView.swift; sourceTree = "<group>"; };
 		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
 		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,14 @@
 			path = dApp;
 			sourceTree = "<group>";
 		};
+		69B81B462BD707A700C6ABA6 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
 		69E3424E2B9FACD500C00DB7 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		69EA166F2BC0BC6B00A4621F /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				69B81B462BD707A700C6ABA6 /* Rank */,
 				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
 				69648AB52BC9C708005C535E /* List */,
 				69648AB22BC9C6D8005C535E /* Dashboard */,
@@ -285,6 +296,7 @@
 				69648AA62BC85EDD005C535E /* FollowersChangeView.swift in Sources */,
 				69648AB12BC9C586005C535E /* ListSort.swift in Sources */,
 				69648AAC2BC86885005C535E /* LineGraphView.swift in Sources */,
+				69B81B492BD707D500C6ABA6 /* FollowersRankView.swift in Sources */,
 				697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */,
 				698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */,
 				698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */,

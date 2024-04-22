@@ -65,6 +65,7 @@ struct ContentView: View {
                     print("Reveived ULR \(url.absoluteString)")
                     _ = try? CoinbaseWalletSDK.shared.handleResponse(url)
                 })
+            FollowersRankView()
             Spacer(minLength: 0)
         }
     }
