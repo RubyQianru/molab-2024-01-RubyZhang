@@ -16,7 +16,7 @@ struct InfoView: View {
                 .font(.title2)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             Divider()
-            InfoViewModel(title: "Twitter", name: coin.name)
+            InfoViewModel(title: "Coin Gecko", name: coin.name)
         }
     }
 }
@@ -50,7 +50,7 @@ struct LinkTagModel : View {
         
         if let url = url {
             Link(destination: url) {
-                Text("Twitter")
+                Text("Coin Gecko")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(5)
                     .background(
