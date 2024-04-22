@@ -22,21 +22,22 @@ struct ContentView: View {
                             Image("\(index)")
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width:250)
+                                .frame(width:200, height: 150)
+                            
                             
                             HStack (spacing: 20){
                                 Group {
-                                    Button(action: {}) {
-                                        HStack {
-                                            Spacer()
-                                            Text("Start")
-                                                .padding(.vertical, 10)
-                                            Spacer()
-                                        }
-                                    }
-                                    .background(Color.greenColor)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    
+//                                    Button(action: {}) {
+//                                        HStack {
+//                                            Spacer()
+//                                            Text("Start")
+//                                                .padding(.vertical, 10)
+//                                            Spacer()
+//                                        }
+//                                    }
+//                                    .background(Color.greenColor)
+//                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    Spacer()
                                     Button(action: {}) {
                                         ZStack {
                                             Circle()
@@ -58,7 +59,7 @@ struct ContentView: View {
                 }
             }
             .padding()
-            .frame(height: 300)
+            .frame(height: 180)
             ConnectView()
                 .onOpenURL(perform: { url in
                     print("Reveived ULR \(url.absoluteString)")

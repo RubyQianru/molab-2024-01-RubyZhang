@@ -31,19 +31,23 @@ class CoinbaseRepo: ObservableObject {
                         case .success:
                             if let account {
                                 self.ethAddress = account.address
+                                print("Successfully retrieve address", self.ethAddress)
                                 continuation.resume(returning: ())
                             } else {
                                 let error = NSError(domain: "error.CoinbaseSDK", code: 999, userInfo: [NSLocalizedDescriptionKey: "Coinbase wallet is not available"])
+                                print("Cannot retrieve account",error)
                                 continuation.resume(throwing: error)
                             }
 
                         case .failure(let error):
+                            print("Cannot connect to coinbase",error)
                             continuation.resume(throwing: error)
                         }
                     }
                 }
             }
         } catch {
+            print("Line 50",error)
             throw error
         }
     }

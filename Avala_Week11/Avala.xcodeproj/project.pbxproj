@@ -29,6 +29,7 @@
 		698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */; };
 		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
 		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
+		69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B432BD7020900C6ABA6 /* PriceNumber.swift */; };
 		69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDA4802BC1B4F70085B014 /* FollowersView.swift */; };
 		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
 		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
@@ -64,6 +65,7 @@
 		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
 		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
 		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		69B81B432BD7020900C6ABA6 /* PriceNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceNumber.swift; sourceTree = "<group>"; };
 		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
 		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +125,7 @@
 				698C41E02BB5CA8800392264 /* dApp */,
 				697BA4512BA2188700FA6726 /* Color */,
 				69EA166F2BC0BC6B00A4621F /* Twitter */,
-				697BA4842BA21D7600FA6726 /* Coins */,
+				697BA4842BA21D7600FA6726 /* Prices */,
 				697BA4542BA2188700FA6726 /* Assets.xcassets */,
 				697BA4552BA2188700FA6726 /* Preview Content */,
 			);
@@ -146,13 +148,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		697BA4842BA21D7600FA6726 /* Coins */ = {
+		697BA4842BA21D7600FA6726 /* Prices */ = {
 			isa = PBXGroup;
 			children = (
 				697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */,
 				697BA4872BA21DED00FA6726 /* MemeCoinView.swift */,
+				69B81B432BD7020900C6ABA6 /* PriceNumber.swift */,
 			);
-			path = Coins;
+			path = Prices;
 			sourceTree = "<group>";
 		};
 		698C41E02BB5CA8800392264 /* dApp */ = {
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				697BA4732BA2188700FA6726 /* Header.swift in Sources */,
+				69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */,
 				697BA4812BA2188700FA6726 /* ContentView.swift in Sources */,
 				69648AA62BC85EDD005C535E /* FollowersChangeView.swift in Sources */,
 				69648AB12BC9C586005C535E /* ListSort.swift in Sources */,

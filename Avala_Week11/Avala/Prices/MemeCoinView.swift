@@ -19,7 +19,7 @@ struct CoinView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 Spacer()
-                HStack(spacing: 50) {
+                HStack(spacing: 65) {
                     ForEach(viewModel.memeCoinData, id: \.self) { coin in var quotes: Quote? {
                             if let quotes = coin.quotes {
                                 return quotes
@@ -30,7 +30,7 @@ struct CoinView: View {
                         GeometryReader { geometry in
                             VStack {
                                 Rectangle()
-                                    .frame(width: 0, height: geometry.size.height - 50 - (viewModel.isDataLoaded ? scaledHeight(for: (quotes?.USD.marketCap)!, in: geometry.size.height) : 0))
+                                    .frame(width: 0, height: geometry.size.height - 80 - (viewModel.isDataLoaded ? scaledHeight(for: (quotes?.USD.marketCap)!, in: geometry.size.height) : 0))
                                 
                                 if let urlString = coin.url, let url = URL(string: urlString) {
                                     Link(destination: url) {
@@ -43,19 +43,19 @@ struct CoinView: View {
                                         .resizable()
                                         .frame(width: 35, height: 35)
                                 }
-                                Text(quotes != nil ? String(format: "%.3f", quotes!.USD.price) : "N/A")
-                                    .frame(width: 50, height: 10)
+                                PriceView(number: quotes!.USD.marketCap)
+                                PriceView(number:quotes!.USD.price)
                                     .fontWeight(.bold)
 
                                 Rectangle()
                                     .fill(Color.purpleColor)
-                                    .frame(width: 50, height: geometry.size.height)
+                                    .frame(width: 65, height: geometry.size.height)
                                 
                             }
                         }
                     }
                     Rectangle()
-                        .fill(Color.white)
+                        .fill(Color.white.opacity(0.0))
                         .frame(width: 50)
                 }
                 
