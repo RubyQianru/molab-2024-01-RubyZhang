@@ -10,6 +10,8 @@
 
 <img width="300" alt="截屏2024-03-25 15 24 55" src="https://github.com/molab-itp/content-2024-01/assets/142470034/fd728230-996e-4837-9db3-cd52a009b038">
 <img width="300" alt="截屏2024-03-25 15 24 55" src="https://github.com/molab-itp/content-2024-01/assets/142470034/55d6f70c-96f5-4578-9dcc-2370736fe81e">
+<img width="300" alt="截屏2024-03-25 15 24 55" src="https://github.com/RubyQianru/molab-2024-01-RubyZhang/assets/142470034/a9481947-9b4d-48e8-be1b-219ba31c60a7">
+<img width="300" alt="截屏2024-03-25 15 24 55" src="https://github.com/RubyQianru/molab-2024-01-RubyZhang/assets/142470034/91ac29e1-c989-4b46-acca-9e0fac2f17c2">
 
 # Audio Recorder & Visualizer
 
