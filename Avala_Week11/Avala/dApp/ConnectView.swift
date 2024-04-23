@@ -13,23 +13,34 @@ struct ConnectView: View {
     @StateObject private var coinbaseRepo = CoinbaseRepo()
     
     var body: some View {
-        VStack {
-            Text("Wallet address")
-            Text(coinbaseRepo.ethAddress)
-            Button {
-                Task {
-                    try await coinbaseRepo.connectToCoinbase()
-                }
-            } label: {
-                Text("Connect Wallet")
+        ZStack{
+            Rectangle()
+                .frame(width: 350, height: 120)
+                .cornerRadius(20)
+                .foregroundColor(Color.greenColor)
+            VStack {
+                Text("Wallet address")
+                    .foregroundColor(.black)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.purpleColor)
-                    .cornerRadius(8)
+                Text(coinbaseRepo.ethAddress)
+                    .foregroundColor(.black)
+
+                Button {
+                    Task {
+                        try await coinbaseRepo.connectToCoinbase()
+                    }
+                } label: {
+                    Text("Connect Wallet")
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.purpleColor)
+                        .cornerRadius(8)
+                }
             }
+            .padding()
+            
         }
-        .padding()
     }
 }
 

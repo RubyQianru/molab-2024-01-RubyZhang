@@ -26,11 +26,11 @@
 		697BA4812BA2188700FA6726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4682BA2188700FA6726 /* ContentView.swift */; };
 		697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */; };
 		697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4872BA21DED00FA6726 /* MemeCoinView.swift */; };
-		698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */; };
 		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
 		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
 		69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B432BD7020900C6ABA6 /* PriceNumber.swift */; };
 		69B81B492BD707D500C6ABA6 /* FollowersRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */; };
+		69B81B552BD72C3100C6ABA6 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */; };
 		69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDA4802BC1B4F70085B014 /* FollowersView.swift */; };
 		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
 		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
@@ -83,7 +83,7 @@
 				69FBE2B02BC0CCE300ABD9DC /* FirebaseDatabaseSwift in Frameworks */,
 				69FBE2A32BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				69FBE2A92BC0CB6E00ABD9DC /* FirebaseAppCheck in Frameworks */,
-				698C41E62BB5CC7400392264 /* CoinbaseWalletSDK in Frameworks */,
+				69B81B552BD72C3100C6ABA6 /* CoinbaseWalletSDK in Frameworks */,
 				69FBE2AE2BC0CCCF00ABD9DC /* FirebaseDatabase in Frameworks */,
 				69FBE2AC2BC0CCB500ABD9DC /* FirebaseFirestore in Frameworks */,
 			);
@@ -221,7 +221,6 @@
 			);
 			name = Avala;
 			packageProductDependencies = (
-				698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */,
 				69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */,
 				69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */,
 				69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */,
@@ -230,6 +229,7 @@
 				69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */,
 				69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */,
 				69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */,
+				69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */,
 			);
 			productName = "Audio-App";
 			productReference = 69648AAD2BC8A4AB005C535E /* Avala.app */;
@@ -260,8 +260,8 @@
 			);
 			mainGroup = 69E3424E2B9FACD500C00DB7;
 			packageReferences = (
-				698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */,
 				69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */,
 			);
 			productRefGroup = 69E3424E2B9FACD500C00DB7;
 			projectDirPath = "";
@@ -523,12 +523,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */ = {
+		69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MobileWalletProtocol/wallet-mobile-sdk";
+			repositoryURL = "https://github.com/MobileWalletProtocol/wallet-mobile-sdk.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.5;
+				version = 1.0.0;
 			};
 		};
 		69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -542,9 +542,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		698C41E52BB5CC7400392264 /* CoinbaseWalletSDK */ = {
+		69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 698C41E42BB5CC7400392264 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */;
+			package = 69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */;
 			productName = CoinbaseWalletSDK;
 		};
 		69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */ = {

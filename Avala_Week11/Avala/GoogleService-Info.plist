@@ -15,17 +15,28 @@
 	<key>STORAGE_BUCKET</key>
 	<string>avala-56fbc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:876968709780:ios:90d756f06a58b564dcee81</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>avala</string>
+			</array>
+		</dict>
+	</array>
 	<key>DATABASE_URL</key>
 	<string>https://avala-56fbc-default-rtdb.firebaseio.com</string>
 </dict>

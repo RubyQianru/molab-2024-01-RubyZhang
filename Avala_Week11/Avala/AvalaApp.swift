@@ -23,9 +23,13 @@ struct AvalaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                CustomTabView()
-            }
+            CustomTabView()
+                .onOpenURL(perform: { url in
+                    print("Reveived ULR \(url.absoluteString)")
+                    _ = try? CoinbaseWalletSDK.shared.handleResponse(url)
+                })
+            
+            
             
         }
     }

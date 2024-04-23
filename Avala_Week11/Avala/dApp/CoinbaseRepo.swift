@@ -13,7 +13,8 @@ class CoinbaseRepo: ObservableObject {
 
     func connectToCoinbase() async throws {
         if !CoinbaseWalletSDK.isConfigured {
-            CoinbaseWalletSDK.configure(callback: URL(string: "coinswiftui://")!)
+            print("configuring")
+            CoinbaseWalletSDK.configure(callback: URL(string: "avala://")!)
         }
 
         let cbwallet = CoinbaseWalletSDK.shared

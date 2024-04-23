@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoinbaseWalletSDK
 
 struct CustomTabView: View {
     @State var selectedTab = "house"

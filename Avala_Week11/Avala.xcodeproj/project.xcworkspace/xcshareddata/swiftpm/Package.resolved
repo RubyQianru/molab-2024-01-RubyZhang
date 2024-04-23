@@ -120,10 +120,10 @@
     {
       "identity" : "wallet-mobile-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MobileWalletProtocol/wallet-mobile-sdk",
+      "location" : "https://github.com/MobileWalletProtocol/wallet-mobile-sdk.git",
       "state" : {
-        "revision" : "4aa89e682f8d7ab1515d85d0797f0d25306bb56a",
-        "version" : "1.0.5"
+        "revision" : "84b3d3f25a2e3b140ec12bb0d22c35b58f817d44",
+        "version" : "1.0.0"
       }
     }
   ],
