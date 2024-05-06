@@ -48,7 +48,7 @@ struct CustomTabView: View {
 }
 
 
-var tabs = ["house",  "list.bullet", "dollarsign.circle.fill", "person.crop.circle"]
+var tabs = ["house",  "list.bullet", "dollarsign.circle.fill"]
 
 struct CustomTabView_Previews: PreviewProvider {
     static var previews: some View {
