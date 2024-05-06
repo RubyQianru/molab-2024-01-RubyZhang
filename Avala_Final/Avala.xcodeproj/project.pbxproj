@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		692F32202BC4836900D2BCB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692F321F2BC4836900D2BCB5 /* GoogleService-Info.plist */; };
+		69648AA42BC85CDF005C535E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AA32BC85CDF005C535E /* DashboardView.swift */; };
+		69648AA62BC85EDD005C535E /* FollowersChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AA52BC85EDD005C535E /* FollowersChangeView.swift */; };
+		69648AAA2BC86595005C535E /* CoinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AA92BC86595005C535E /* CoinHeaderView.swift */; };
+		69648AAC2BC86885005C535E /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AAB2BC86885005C535E /* LineGraphView.swift */; };
+		69648AAF2BC8A512005C535E /* FollowerNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AAE2BC8A512005C535E /* FollowerNumber.swift */; };
+		69648AB12BC9C586005C535E /* ListSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69648AB02BC9C586005C535E /* ListSort.swift */; };
+		696C079F2BCA0258001DCEE2 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C079E2BCA0258001DCEE2 /* StatisticView.swift */; };
+		696C07A12BCA097C001DCEE2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C07A02BCA097C001DCEE2 /* InfoView.swift */; };
+		697BA46F2BA2188700FA6726 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4522BA2188700FA6726 /* Color.swift */; };
+		697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4532BA2188700FA6726 /* CustomTabView.swift */; };
+		697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4542BA2188700FA6726 /* Assets.xcassets */; };
+		697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697BA4562BA2188700FA6726 /* Preview Assets.xcassets */; };
+		697BA4732BA2188700FA6726 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4572BA2188700FA6726 /* Header.swift */; };
+		697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4662BA2188700FA6726 /* TabButtonView.swift */; };
+		697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4672BA2188700FA6726 /* AvalaApp.swift */; };
+		697BA4812BA2188700FA6726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4682BA2188700FA6726 /* ContentView.swift */; };
+		697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */; };
+		697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697BA4872BA21DED00FA6726 /* MemeCoinView.swift */; };
+		698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */; };
+		698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C41E92BB5CCCA00392264 /* ConnectView.swift */; };
+		69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B432BD7020900C6ABA6 /* PriceNumber.swift */; };
+		69B81B492BD707D500C6ABA6 /* FollowersRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */; };
+		69B81B552BD72C3100C6ABA6 /* CoinbaseWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */; };
+		69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDA4802BC1B4F70085B014 /* FollowersView.swift */; };
+		69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */; };
+		69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */; };
+		69FBE2A32BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */; };
+		69FBE2A52BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */; };
+		69FBE2A72BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		69FBE2A92BC0CB6E00ABD9DC /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */; };
+		69FBE2AC2BC0CCB500ABD9DC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */; };
+		69FBE2AE2BC0CCCF00ABD9DC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */; };
+		69FBE2B02BC0CCE300ABD9DC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		692F321F2BC4836900D2BCB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69648AA32BC85CDF005C535E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		69648AA52BC85EDD005C535E /* FollowersChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersChangeView.swift; sourceTree = "<group>"; };
+		69648AA92BC86595005C535E /* CoinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHeaderView.swift; sourceTree = "<group>"; };
+		69648AAB2BC86885005C535E /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		69648AAD2BC8A4AB005C535E /* Avala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avala.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69648AAE2BC8A512005C535E /* FollowerNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerNumber.swift; sourceTree = "<group>"; };
+		69648AB02BC9C586005C535E /* ListSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSort.swift; sourceTree = "<group>"; };
+		696C079E2BCA0258001DCEE2 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		696C07A02BCA097C001DCEE2 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		697BA4522BA2188700FA6726 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		697BA4532BA2188700FA6726 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		697BA4542BA2188700FA6726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		697BA4562BA2188700FA6726 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		697BA4572BA2188700FA6726 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		697BA4662BA2188700FA6726 /* TabButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		697BA4672BA2188700FA6726 /* AvalaApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvalaApp.swift; sourceTree = "<group>"; };
+		697BA4682BA2188700FA6726 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinSession.swift; sourceTree = "<group>"; };
+		697BA4872BA21DED00FA6726 /* MemeCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoinView.swift; sourceTree = "<group>"; };
+		698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseRepo.swift; sourceTree = "<group>"; };
+		698C41E92BB5CCCA00392264 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		69B81B432BD7020900C6ABA6 /* PriceNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceNumber.swift; sourceTree = "<group>"; };
+		69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersRankView.swift; sourceTree = "<group>"; };
+		69DDA4802BC1B4F70085B014 /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
+		69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69E342542B9FACD500C00DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FBE2A52BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift in Frameworks */,
+				69FBE2A72BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				69FBE2A12BC0CB6E00ABD9DC /* FirebaseAnalytics in Frameworks */,
+				69FBE2B02BC0CCE300ABD9DC /* FirebaseDatabaseSwift in Frameworks */,
+				69FBE2A32BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				69FBE2A92BC0CB6E00ABD9DC /* FirebaseAppCheck in Frameworks */,
+				69B81B552BD72C3100C6ABA6 /* CoinbaseWalletSDK in Frameworks */,
+				69FBE2AE2BC0CCCF00ABD9DC /* FirebaseDatabase in Frameworks */,
+				69FBE2AC2BC0CCB500ABD9DC /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69648AB22BC9C6D8005C535E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				69648AA32BC85CDF005C535E /* DashboardView.swift */,
+				696C079E2BCA0258001DCEE2 /* StatisticView.swift */,
+				696C07A02BCA097C001DCEE2 /* InfoView.swift */,
+				69648AAB2BC86885005C535E /* LineGraphView.swift */,
+				69648AA92BC86595005C535E /* CoinHeaderView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		69648AB52BC9C708005C535E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				69648AA52BC85EDD005C535E /* FollowersChangeView.swift */,
+				69648AB02BC9C586005C535E /* ListSort.swift */,
+				69DDA4802BC1B4F70085B014 /* FollowersView.swift */,
+				69648AAE2BC8A512005C535E /* FollowerNumber.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		697BA4492BA2188700FA6726 /* Avala */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4572BA2188700FA6726 /* Header.swift */,
+				697BA4672BA2188700FA6726 /* AvalaApp.swift */,
+				697BA4682BA2188700FA6726 /* ContentView.swift */,
+				692F321F2BC4836900D2BCB5 /* GoogleService-Info.plist */,
+				697BA4532BA2188700FA6726 /* CustomTabView.swift */,
+				697BA4662BA2188700FA6726 /* TabButtonView.swift */,
+				698C41E02BB5CA8800392264 /* dApp */,
+				697BA4512BA2188700FA6726 /* Color */,
+				69EA166F2BC0BC6B00A4621F /* Twitter */,
+				697BA4842BA21D7600FA6726 /* Prices */,
+				697BA4542BA2188700FA6726 /* Assets.xcassets */,
+				697BA4552BA2188700FA6726 /* Preview Content */,
+			);
+			path = Avala;
+			sourceTree = "<group>";
+		};
+		697BA4512BA2188700FA6726 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4522BA2188700FA6726 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		697BA4552BA2188700FA6726 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4562BA2188700FA6726 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		697BA4842BA21D7600FA6726 /* Prices */ = {
+			isa = PBXGroup;
+			children = (
+				697BA4852BA21D8B00FA6726 /* MemeCoinSession.swift */,
+				697BA4872BA21DED00FA6726 /* MemeCoinView.swift */,
+				69B81B432BD7020900C6ABA6 /* PriceNumber.swift */,
+			);
+			path = Prices;
+			sourceTree = "<group>";
+		};
+		698C41E02BB5CA8800392264 /* dApp */ = {
+			isa = PBXGroup;
+			children = (
+				698C41E72BB5CCA100392264 /* CoinbaseRepo.swift */,
+				698C41E92BB5CCCA00392264 /* ConnectView.swift */,
+			);
+			path = dApp;
+			sourceTree = "<group>";
+		};
+		69B81B462BD707A700C6ABA6 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				69B81B482BD707D500C6ABA6 /* FollowersRankView.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		69E3424E2B9FACD500C00DB7 = {
+			isa = PBXGroup;
+			children = (
+				697BA4492BA2188700FA6726 /* Avala */,
+				69FBE2AA2BC0CCB500ABD9DC /* Frameworks */,
+				69648AAD2BC8A4AB005C535E /* Avala.app */,
+			);
+			sourceTree = "<group>";
+		};
+		69EA166F2BC0BC6B00A4621F /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				69B81B462BD707A700C6ABA6 /* Rank */,
+				69FBE29A2BC0C72500ABD9DC /* FollowersSession.swift */,
+				69648AB52BC9C708005C535E /* List */,
+				69648AB22BC9C6D8005C535E /* Dashboard */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		69FBE2AA2BC0CCB500ABD9DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69E342562B9FACD500C00DB7 /* Avala */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */;
+			buildPhases = (
+				69E342532B9FACD500C00DB7 /* Sources */,
+				69E342542B9FACD500C00DB7 /* Frameworks */,
+				69E342552B9FACD500C00DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Avala;
+			packageProductDependencies = (
+				69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */,
+				69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */,
+				69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */,
+				69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */,
+				69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */,
+				69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */,
+				69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */,
+				69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */,
+				69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */,
+			);
+			productName = "Audio-App";
+			productReference = 69648AAD2BC8A4AB005C535E /* Avala.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69E3424F2B9FACD500C00DB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					69E342562B9FACD500C00DB7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69E3424E2B9FACD500C00DB7;
+			packageReferences = (
+				69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */,
+			);
+			productRefGroup = 69E3424E2B9FACD500C00DB7;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69E342562B9FACD500C00DB7 /* Avala */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69E342552B9FACD500C00DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697BA4722BA2188700FA6726 /* Preview Assets.xcassets in Resources */,
+				692F32202BC4836900D2BCB5 /* GoogleService-Info.plist in Resources */,
+				697BA4712BA2188700FA6726 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69E342532B9FACD500C00DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697BA4732BA2188700FA6726 /* Header.swift in Sources */,
+				69B81B442BD7020A00C6ABA6 /* PriceNumber.swift in Sources */,
+				697BA4812BA2188700FA6726 /* ContentView.swift in Sources */,
+				69648AA62BC85EDD005C535E /* FollowersChangeView.swift in Sources */,
+				69648AB12BC9C586005C535E /* ListSort.swift in Sources */,
+				69648AAC2BC86885005C535E /* LineGraphView.swift in Sources */,
+				69B81B492BD707D500C6ABA6 /* FollowersRankView.swift in Sources */,
+				697BA47F2BA2188700FA6726 /* TabButtonView.swift in Sources */,
+				698C41EA2BB5CCCA00392264 /* ConnectView.swift in Sources */,
+				698C41E82BB5CCA100392264 /* CoinbaseRepo.swift in Sources */,
+				696C07A12BCA097C001DCEE2 /* InfoView.swift in Sources */,
+				69FBE29B2BC0C72500ABD9DC /* FollowersSession.swift in Sources */,
+				69648AAF2BC8A512005C535E /* FollowerNumber.swift in Sources */,
+				697BA4862BA21D8B00FA6726 /* MemeCoinSession.swift in Sources */,
+				697BA46F2BA2188700FA6726 /* Color.swift in Sources */,
+				697BA4882BA21DED00FA6726 /* MemeCoinView.swift in Sources */,
+				696C079F2BCA0258001DCEE2 /* StatisticView.swift in Sources */,
+				697BA4702BA2188700FA6726 /* CustomTabView.swift in Sources */,
+				69DDA4812BC1B4F70085B014 /* FollowersView.swift in Sources */,
+				69648AA42BC85CDF005C535E /* DashboardView.swift in Sources */,
+				69648AAA2BC86595005C535E /* CoinHeaderView.swift in Sources */,
+				697BA4802BA2188700FA6726 /* AvalaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		69E342632B9FACD600C00DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69E342642B9FACD600C00DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69E342662B9FACD600C00DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D5BR9CH9RX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ruby.AvalaDapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69E342672B9FACD600C00DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = D5BR9CH9RX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ruby.AvalaDapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69E342522B9FACD500C00DB7 /* Build configuration list for PBXProject "Avala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E342632B9FACD600C00DB7 /* Debug */,
+				69E342642B9FACD600C00DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69E342652B9FACD600C00DB7 /* Build configuration list for PBXNativeTarget "Avala" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69E342662B9FACD600C00DB7 /* Debug */,
+				69E342672B9FACD600C00DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MobileWalletProtocol/wallet-mobile-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		69B81B542BD72C3100C6ABA6 /* CoinbaseWalletSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69B81B532BD72C3100C6ABA6 /* XCRemoteSwiftPackageReference "wallet-mobile-sdk" */;
+			productName = CoinbaseWalletSDK;
+		};
+		69FBE2A02BC0CB6E00ABD9DC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		69FBE2A22BC0CB6E00ABD9DC /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		69FBE2A42BC0CB6E00ABD9DC /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		69FBE2A62BC0CB6E00ABD9DC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		69FBE2A82BC0CB6E00ABD9DC /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		69FBE2AB2BC0CCB500ABD9DC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		69FBE2AD2BC0CCCF00ABD9DC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		69FBE2AF2BC0CCE300ABD9DC /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69FBE29F2BC0CB6E00ABD9DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 69E3424F2B9FACD500C00DB7 /* Project object */;
+}
